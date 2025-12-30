@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Testing
+coverage/
+*.log
+
+# Claude artifacts
+.claude/
+
+# Temp files
+*.tmp
+tmp/
+temp/
+
+# Test data markers
+.locomo-data-loaded
+
+# Deprecated
+*-old.*
+_deprecated/
