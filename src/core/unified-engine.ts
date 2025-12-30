@@ -224,14 +224,21 @@ all_current_states(Subject, States) :-
     
     // Generic Prolog query for ANY domain (truly schemaless)
     if (parsed.temporalScope === 'CURRENT' && parsed.targetDomain && this.engine.query) {
-      const subject = (parsed.subject || 'taro').toLowerCase();
+      // If no subject is parsed, we cannot proceed with the query
+      if (!parsed.subject) {
+        // Fall through to LLM for context-aware processing
+        if (this.options.debug) {
+          console.log('[UnifiedEngine] No subject identified, using LLM for response');
+        }
+      } else {
+        const subject = parsed.subject.toLowerCase();
       const domain = parsed.targetDomain.toLowerCase();
       
-      // Universal query using findall - works for both single and multiple values
-      const prologQuery = `findall(Val, current_state("${subject}", ${domain}, Val), Results)`;
+        // Universal query using findall - works for both single and multiple values
+        const prologQuery = `findall(Val, current_state("${subject}", ${domain}, Val), Results)`;
       
-      try {
-        const results = await this.engine.query(prologQuery);
+        try {
+          const results = await this.engine.query(prologQuery);
         
         // Handle AsyncGenerator
         let processedResults: any[] = [];
@@ -245,8 +252,8 @@ all_current_states(Subject, States) :-
           }
         }
         
-        // Return formatted response if we have results
-        if (processedResults.length > 0 && processedResults[0]?.Results) {
+          // Return formatted response if we have results
+          if (processedResults.length > 0 && processedResults[0]?.Results) {
           const values = processedResults[0].Results;
           if (values && values.length > 0) {
             // Let LLM format the response naturally
@@ -258,10 +265,11 @@ all_current_states(Subject, States) :-
             );
           }
         }
-      } catch (e) {
-        // Prolog error - fall through to LLM
-        if (this.options.debug) {
-          console.error('[UnifiedEngine] Prolog query error:', e);
+        } catch (e) {
+          // Prolog error - fall through to LLM
+          if (this.options.debug) {
+            console.error('[UnifiedEngine] Prolog query error:', e);
+          }
         }
       }
     }
@@ -318,7 +326,11 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
     
     if (targetDomain && subject) {
       // Universal query for ANY domain - works with dynamically created fluents
-      const normalizedSubject = (subject || 'taro').toLowerCase();
+      // Subject is required for structured queries
+      if (!subject) {
+        return [];
+      }
+      const normalizedSubject = subject.toLowerCase();
       prologQuery = `findall(Val, current_state("${normalizedSubject}", ${targetDomain}, Val), Results)`;
     } else if (subject) {
       // Get all current states if no domain specified
