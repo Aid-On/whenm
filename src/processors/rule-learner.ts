@@ -4,8 +4,8 @@
  * Learns and manages Event Calculus rules dynamically
  */
 
-import type { WhenMEngine } from './index.js';
-import type { UnifiedLLMProvider } from './llm-provider.js';
+import type { WhenMEngine } from '../index.js';
+import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
 
 /**
  * 動的ルール学習器

@@ -4,13 +4,13 @@
  * Core engine that combines Prolog reasoning with LLM capabilities
  */
 
-import type { WhenMEngine } from './index.js';
-import type { UnifiedLLMProvider } from './llm-provider.js';
-import { DynamicRuleLearner } from './rule-learner.js';
-import { QueryRefinementLayer } from './query-refiner.js';
-import { createPersistence, type PersistencePlugin } from './persistence/index.js';
-import { EventCalculusProcessor, type EventCalculusStructure } from './event-calculus-processor.js';
-import { SchemalessQueryParser } from './schemaless-query-parser.js';
+import type { WhenMEngine } from '../index.js';
+import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
+import { DynamicRuleLearner } from '../processors/rule-learner.js';
+import { QueryRefinementLayer } from '../processors/query-refiner.js';
+import { createPersistence, type PersistencePlugin } from '../persistence/index.js';
+import { EventCalculusProcessor, type EventCalculusStructure } from '../processors/event-calculus-processor.js';
+import { SchemalessQueryParser } from '../processors/schemaless-query-parser.js';
 
 /**
  * 統合スキーマレスエンジン

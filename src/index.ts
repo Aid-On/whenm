@@ -37,19 +37,7 @@ export interface WhenMEngineOptions {
 // Main API
 export { WhenM, whenm, default } from "./whenm.js";
 
-// Query builders  
-export { 
-  QueryBuilder, 
-  Timeline, 
-  createQueryBuilder, 
-  createTimeline 
-} from "./query-builder.js";
-
-// Natural language
-export { 
-  NaturalLanguageQuery,
-  NaturalLanguageQueryChain 
-} from "./natural-query.js";
+// Removed deprecated query builders and natural language APIs
 
 // Engines
 export {
@@ -63,17 +51,11 @@ export {
   type UnifiedLLMProvider,
   type UniLLMConfig,
   type CreateEngineOptions
-} from './final-engine.js';
+} from './core/engine-factory.js';
 
 // Utilities
-export { normalizeDate, toUnixTime, parseDuration } from "./utils.js";
-
-// NLP Parser (for advanced use)
-export { NLPParser } from "./nlp-parser.js";
-
-// Prolog utilities
-export { PrologParser } from "./prolog-parser.js";
-export { load as loadTrealla, Prolog } from "trealla";
+export { normalizeDate, toUnixTime, parseDuration } from "./utils/utils.js";
+// Trealla Prolog is used internally
 
 // Error handling
 export class WhenMError extends Error {

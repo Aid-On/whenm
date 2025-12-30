@@ -5,7 +5,7 @@
  * without hardcoded patterns or schemas
  */
 
-import type { UnifiedLLMProvider } from './llm-provider.js';
+import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
 
 export interface RefinedQuery {
   original: string;

@@ -4,14 +4,14 @@
  * Entry point and factory functions for the WhenM temporal memory system
  */
 
-import type { WhenMEngine } from './index.js';
-import { UniLLMProvider, type UniLLMConfig } from './llm-provider.js';
+import type { WhenMEngine } from '../index.js';
+import { UniLLMProvider, type UniLLMConfig } from '../providers/llm-provider.js';
 import { UnifiedSchemalessEngine } from './unified-engine.js';
-import { QueryRefinementLayer } from './query-refiner.js';
+import { QueryRefinementLayer } from '../processors/query-refiner.js';
 
 // Re-export for backward compatibility
 export { UniLLMProvider, UnifiedSchemalessEngine, QueryRefinementLayer };
-export type { UnifiedLLMProvider, UniLLMConfig } from './llm-provider.js';
+export type { UnifiedLLMProvider, UniLLMConfig } from '../providers/llm-provider.js';
 
 /**
  * Unified engine creation options

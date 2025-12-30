@@ -3,7 +3,7 @@
  * LLMが意味論的判断を行い、Prologが時間的計算を行う
  */
 
-import type { UnifiedLLMProvider } from './llm-provider.js';
+import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
 
 export type TemporalType = 'INITIATES' | 'TERMINATES' | 'HAPPENS' | 'STATE_UPDATE';
 

@@ -6,7 +6,7 @@
  * 真のスキーマレス：未知の概念を動的に学習
  */
 
-import { createUnifiedEngine } from '../../dist/final-engine.js';
+import { createUnifiedEngine } from '../../dist/engine-factory.js';
 
 async function testBasicFunctionality() {
   console.log('=== 基本機能テスト ===\n');

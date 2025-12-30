@@ -12,8 +12,8 @@ import {
   createCloudflareEngine,
   type CreateEngineOptions,
   type UniLLMConfig
-} from './final-engine.js';
-import { UniLLMProvider, type UnifiedLLMProvider } from './llm-provider.js';
+} from './core/engine-factory.js';
+import { UniLLMProvider, type UnifiedLLMProvider } from './providers/llm-provider.js';
 import type { WhenMEngine } from './index.js';
 // Removed deprecated imports - only use ask() method for temporal reasoning
 

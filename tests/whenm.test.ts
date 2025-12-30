@@ -1,92 +1,115 @@
-import { describe, it, expect } from "vitest";
-import { whenm } from "../src/whenm.js";
+import { describe, it, expect } from 'vitest';
+import { WhenM } from '../src/whenm';
 
-describe("WhenM", () => {
-  describe("auto() factory", () => {
-    it("should create instance with auto provider", async () => {
-      const memory = await whenm.auto();
-      expect(memory).toBeDefined();
-      expect(memory.remember).toBeDefined();
-      expect(memory.ask).toBeDefined();
-      expect(memory.nl).toBeDefined();
+describe('WhenM', () => {
+  describe('Factory methods', () => {
+    it('should create instance with auto()', async () => {
+      const whenm = await WhenM.auto();
+      expect(whenm).toBeDefined();
+      expect(whenm.remember).toBeDefined();
+      expect(whenm.ask).toBeDefined();
+    });
+
+    it('should create instance with create()', async () => {
+      const whenm = await WhenM.create({ llm: 'mock' });
+      expect(whenm).toBeDefined();
+      expect(whenm.remember).toBeDefined();
+      expect(whenm.ask).toBeDefined();
+    });
+
+    it('should create instance with string config', async () => {
+      const whenm = await WhenM.create('mock');
+      expect(whenm).toBeDefined();
     });
   });
 
-  describe("basic operations", () => {
-    it("should remember and query events", async () => {
-      const memory = await whenm.auto();
+  describe('Basic operations', () => {
+    it('should remember events', async () => {
+      const whenm = await WhenM.create('mock');
       
-      // Remember an event
-      await memory.remember("Alice learned Python", "2023-01-10");
-      
-      // The actual query would need a real LLM provider
-      // For now, just test that methods exist and don't throw
-      expect(memory.ask).toBeDefined();
-      expect(memory.query).toBeDefined();
+      // Should not throw
+      await expect(whenm.remember('Alice became CEO')).resolves.toBeTruthy();
+      await expect(whenm.remember('Bob learned Python', '2024-01-01')).resolves.toBeTruthy();
     });
 
-    it("should support method chaining", async () => {
-      const memory = await whenm.auto();
+    it('should answer questions', async () => {
+      const whenm = await WhenM.create('mock');
+      await whenm.remember('Alice became CEO');
       
-      // Test chaining
-      const chain = memory
-        .remember("Bob joined the company", "2023-02-01")
-        .then(() => memory.remember("Bob became senior engineer", "2024-01-01"));
-      
-      await expect(chain).resolves.not.toThrow();
-    });
-  });
-
-  describe("query builder", () => {
-    it("should create query builder", async () => {
-      const memory = await whenm.auto();
-      const builder = memory.query();
-      
-      expect(builder).toBeDefined();
-      expect(builder.subject).toBeDefined();
-      expect(builder.verb).toBeDefined();
-      expect(builder.between).toBeDefined();
-      expect(builder.execute).toBeDefined();
+      const answer = await whenm.ask('What is Alice?');
+      expect(answer).toBeDefined();
+      expect(typeof answer).toBe('string');
     });
 
-    it("should build queries fluently", async () => {
-      const memory = await whenm.auto();
+    it('should support chaining', async () => {
+      const whenm = await WhenM.create('mock');
       
-      const query = memory
-        .query()
-        .subject("Alice")
-        .verb("learned");
+      const result = await whenm
+        .remember('Alice became CEO')
+        .then(w => w.remember('Bob joined as CTO'));
       
-      expect(query).toBeDefined();
-      // Actual execution would need LLM provider
+      expect(result).toBe(whenm);
     });
   });
 
-  describe("timeline", () => {
-    it("should create timeline", async () => {
-      const memory = await whenm.auto();
-      const timeline = memory.timeline("Alice");
+  describe('Utility methods', () => {
+    it('should search events', async () => {
+      const whenm = await WhenM.create('mock');
+      await whenm.remember('Alice learned Python');
       
-      expect(timeline).toBeDefined();
-      expect(timeline.at).toBeDefined();
-      expect(timeline.between).toBeDefined();
-      expect(timeline.recent).toBeDefined();
+      const results = await whenm.search('Python');
+      expect(results).toBeDefined();
+      expect(typeof results).toBe('string');
+    });
+
+    it('should get recent events', async () => {
+      const whenm = await WhenM.create('mock');
+      await whenm.remember('Alice became CEO');
+      
+      const recent = await whenm.recent(7);
+      expect(recent).toBeDefined();
+      expect(typeof recent).toBe('string');
+    });
+
+    it('should handle batch operations', async () => {
+      const whenm = await WhenM.create('mock');
+      
+      await whenm.batch([
+        { text: 'Alice became CEO' },
+        { text: 'Bob joined as CTO', date: '2024-01-01' }
+      ]);
+      
+      const answer = await whenm.ask('Who is the CEO?');
+      expect(answer).toBeDefined();
     });
   });
 
-  describe("search", () => {
-    it("should search events", async () => {
-      const memory = await whenm.auto();
+  describe('Debug mode', () => {
+    it('should toggle debug mode', async () => {
+      const whenm = await WhenM.create('mock');
       
-      await memory.remember("Alice learned Python", "2023-01-10");
-      await memory.remember("Bob learned JavaScript", "2023-02-01");
+      const result = whenm.debug(true);
+      expect(result).toBe(whenm); // Should return self for chaining
       
-      // Search function exists
-      expect(memory.search).toBeDefined();
+      whenm.debug(false);
+    });
+  });
+
+  describe('Export/Import', () => {
+    it('should export knowledge', async () => {
+      const whenm = await WhenM.create('mock');
+      await whenm.remember('Alice became CEO');
       
-      // Search returns array (even if empty without real engine)
-      const results = await memory.search("Python");
-      expect(Array.isArray(results)).toBe(true);
+      const knowledge = await whenm.export();
+      expect(knowledge).toBeDefined();
+      expect(typeof knowledge).toBe('string');
+    });
+
+    it('should reset memory', async () => {
+      const whenm = await WhenM.create('mock');
+      await whenm.remember('Alice became CEO');
+      
+      await expect(whenm.reset()).resolves.not.toThrow();
     });
   });
 });

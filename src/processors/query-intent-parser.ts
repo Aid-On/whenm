@@ -4,7 +4,7 @@
  * Parses natural language queries into structured intents
  */
 
-import type { UnifiedLLMProvider } from './llm-provider.js';
+import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
 
 export interface NaturalQueryIntent {
   action: 'query' | 'aggregate' | 'timeline' | 'compare' | 'search' | 'when';

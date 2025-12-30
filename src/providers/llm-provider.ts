@@ -5,7 +5,7 @@
  */
 
 import { generate } from '@aid-on/unillm';
-import { NLPParser } from './nlp-parser.js';
+import { NLPParser } from '../processors/nlp-parser.js';
 
 /**
  * LLMプロバイダーインターフェース（拡張版）

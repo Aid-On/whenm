@@ -3,7 +3,7 @@
  * LLM determines domains dynamically without hardcoding
  */
 
-import type { UnifiedLLMProvider } from './llm-provider.js';
+import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
 
 export type TemporalScope = 'CURRENT' | 'PAST' | 'FUTURE' | 'SPECIFIC_TIME' | 'RANGE';
 

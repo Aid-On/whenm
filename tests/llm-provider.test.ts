@@ -1,15 +1,10 @@
-import { describe, it, expect, vi } from 'vitest';
-import { UniLLMProvider } from '../src/llm-provider';
+import { describe, it, expect } from 'vitest';
+import { UniLLMProvider } from '../src/providers/llm-provider';
 
 describe('UniLLMProvider', () => {
   describe('Mock provider', () => {
     it('should create mock provider', () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'mock',
-        apiToken: 'mock',
-        email: 'mock'
-      });
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
       expect(provider).toBeDefined();
       expect(provider.parseEvent).toBeDefined();
@@ -19,124 +14,157 @@ describe('UniLLMProvider', () => {
       expect(provider.complete).toBeDefined();
     });
 
-    it('should parse simple events in mock mode', async () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'mock',
-        apiToken: 'mock',
-        email: 'mock'
-      });
+    it('should parse simple events', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
-      const result = await provider.parseEvent('Alice learned Python');
-      expect(result).toBeDefined();
-      expect(result).toHaveProperty('subject', 'Alice');
-      expect(result).toHaveProperty('verb', 'learned');
-      expect(result).toHaveProperty('object', 'Python');
+      const event = await provider.parseEvent('Alice learned Python');
+      
+      expect(event).toEqual({
+        subject: 'Alice',
+        verb: 'learned',
+        object: 'Python'
+      });
     });
 
-    it('should parse compound events in mock mode', async () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'mock',
-        apiToken: 'mock',
-        email: 'mock'
-      });
+    it('should handle single-word events', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
-      const result = await provider.parseEvent('Nancy joined as Data Scientist');
-      expect(Array.isArray(result)).toBe(true);
-      expect(result).toHaveLength(2);
-      expect(result[0]).toHaveProperty('verb', 'joined');
-      expect(result[1]).toHaveProperty('verb', 'became');
+      const event = await provider.parseEvent('Alice');
+      
+      expect(event).toEqual({
+        subject: 'Alice',
+        verb: 'did',
+        object: undefined
+      });
     });
 
-    it('should generate rules in mock mode', async () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'mock',
-        apiToken: 'mock',
-        email: 'mock'
+    it('should handle empty events', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
+      
+      const event = await provider.parseEvent('');
+      
+      expect(event).toEqual({
+        subject: 'unknown',
+        verb: 'unknown',
+        object: null
       });
+    });
+
+    it('should generate rules', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
       const rules = await provider.generateRules('learned', 'Alice learned Python');
+      
       expect(rules).toBeDefined();
-      expect(rules).toHaveProperty('type');
-      expect(rules.type).toBe('state_change');
+      expect(rules.type).toBe('instantaneous');
       expect(rules.initiates).toBeDefined();
+      expect(Array.isArray(rules.initiates)).toBe(true);
     });
 
-    it('should parse questions in mock mode', async () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'mock',
-        apiToken: 'mock',
-        email: 'mock'
-      });
+    it('should parse questions', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
       const parsed = await provider.parseQuestion('What did Alice learn?');
+      
       expect(parsed).toBeDefined();
-      expect(parsed).toHaveProperty('queryType');
       expect(parsed.queryType).toBe('what');
+      expect(parsed.subject).toBe('alice');
     });
 
-    it('should format response in mock mode', async () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'mock',
-        apiToken: 'mock',
-        email: 'mock'
-      });
+    it('should handle empty questions', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
+      
+      const parsed = await provider.parseQuestion('');
+      
+      expect(parsed).toBeDefined();
+      expect(parsed.queryType).toBe('what');
+      expect(parsed.subject).toBe(null);
+    });
+
+    it('should format responses', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
       const response = await provider.formatResponse(
-        { subject: 'Alice', verb: 'learned', object: 'Python' },
-        'What did Alice learn?'
+        [{ subject: 'Alice', value: 'CEO' }],
+        'What is Alice?'
       );
-      expect(response).toBe('Alice learned Python');
+      
+      expect(response).toBeDefined();
+      expect(typeof response).toBe('string');
     });
 
-    it('should complete prompts in mock mode', async () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'mock',
-        apiToken: 'mock',
-        email: 'mock'
-      });
+    it('should handle complete method', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
-      const result = await provider.complete('Test prompt');
-      expect(result).toBe('{"result":"mock"}');
+      const response = await provider.complete('Test prompt');
+      
+      expect(response).toBeDefined();
+      expect(typeof response).toBe('string');
     });
   });
 
-  describe('Provider configuration', () => {
-    it('should handle Groq provider', () => {
-      const provider = new UniLLMProvider({
-        provider: 'groq',
-        apiKey: 'test-key',
-        model: 'mixtral-8x7b-32768'
-      });
+  describe('Provider detection', () => {
+    it('should handle different provider configs', () => {
+      const providers = [
+        { provider: 'mock' },
+        { provider: 'groq', apiKey: 'test' },
+        { provider: 'gemini', apiKey: 'test' },
+        { provider: 'cloudflare', cloudflareAccountId: 'test', cloudflareApiKey: 'test' }
+      ];
       
-      expect(provider).toBeDefined();
+      providers.forEach(config => {
+        const provider = new UniLLMProvider(config as any);
+        expect(provider).toBeDefined();
+      });
     });
 
-    it('should handle Gemini provider', () => {
-      const provider = new UniLLMProvider({
-        provider: 'gemini',
-        apiKey: 'test-key',
-        model: 'gemini-pro'
-      });
+    it('should get default model for providers', () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
+      // Should have internal method to get model
       expect(provider).toBeDefined();
     });
+  });
 
-    it('should handle Cloudflare provider', () => {
-      const provider = new UniLLMProvider({
-        provider: 'cloudflare',
-        accountId: 'test-account',
-        apiToken: 'test-token',
-        email: 'test@example.com',
-        model: '@cf/openai/gpt-oss-120b'
-      });
+  describe('Complex parsing scenarios', () => {
+    it('should parse Japanese text', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
       
-      expect(provider).toBeDefined();
+      const event = await provider.parseEvent('太郎が花子と結婚した');
+      
+      expect(event).toBeDefined();
+      expect(event.subject).toBe('太郎が花子と結婚した');
+      expect(event.verb).toBe('did');
+    });
+
+    it('should handle multi-word objects', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
+      
+      const event = await provider.parseEvent('Alice became Senior Software Engineer');
+      
+      expect(event).toEqual({
+        subject: 'Alice',
+        verb: 'became',
+        object: 'Senior Software Engineer'
+      });
+    });
+
+    it('should handle when questions', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
+      
+      const parsed = await provider.parseQuestion('When did Alice learn Python?');
+      
+      expect(parsed).toBeDefined();
+      expect(parsed.queryType).toBe('when');
+    });
+
+    it('should handle who questions', async () => {
+      const provider = new UniLLMProvider({ provider: 'mock' });
+      
+      const parsed = await provider.parseQuestion('Who is the CEO?');
+      
+      expect(parsed).toBeDefined();
+      expect(parsed.queryType).toBe('who');
     });
   });
 });

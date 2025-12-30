@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { createUnifiedEngine } from '../../dist/final-engine.js';
+import { createUnifiedEngine } from '../../dist/engine-factory.js';
 
 async function test() {
   console.log('=== Deep Debug Test ===\n');
