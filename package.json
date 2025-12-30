@@ -1,6 +1,6 @@
 {
   "name": "@aid-on/whenm",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Time-aware memory system that understands when things happened, not just what happened",
   "type": "module",
   "main": "dist/index.js",
