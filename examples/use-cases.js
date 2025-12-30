@@ -3,7 +3,7 @@
  * Run with: node examples/use-cases.js
  */
 
-import { createMockEngine, createGroqEngine } from '../src/index.js';
+import { createMockEngine, createGroqEngine } from '../dist/index.js';
 import dotenv from 'dotenv';
 
 dotenv.config();

@@ -42,3 +42,20 @@ jobs:
       env:
         CI: true
     
+    - name: Build examples (compilation check)
+      run: |
+        echo "Checking examples can be imported and run..."
+        for file in examples/*.js; do
+          echo "Checking $file"
+          node --check "$file"
+        done
+      env:
+        CI: true
+    
+    - name: Build benchmarks (compilation check)
+      run: |
+        echo "Checking benchmarks compile..."
+        npx tsc benchmarks/*.ts --noEmit --allowJs --checkJs --module esnext --moduleResolution bundler --skipLibCheck
+      env:
+        CI: true
+    
