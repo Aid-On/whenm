@@ -8,7 +8,7 @@ import type { WhenMEngine } from '../index.js';
 import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
 
 /**
- * 動的ルール学習器
+ * Dynamic Rule Learner
  */
 export class DynamicRuleLearner {
   private learnedRules = new Map<string, any>();
@@ -20,24 +20,24 @@ export class DynamicRuleLearner {
   ) {}
   
   /**
-   * 動詞から動的にルールを学習
+   * Learn rules dynamically from verbs
    */
   async learnVerb(verb: string, exampleContext: string): Promise<void> {
-    // キャッシュチェック
+    // Check cache
     if (this.learnedRules.has(verb)) {
       return;
     }
     
-    // LLMに因果関係ルールを生成させる
+    // Generate causal relationship rules using LLM
     const rules = await this.llm.generateRules(verb, exampleContext);
     
-    // ルールを保存
+    // Save rules
     this.learnedRules.set(verb, rules);
     
-    // Prologルールに変換
+    // Convert to Prolog rules
     const prologRules: string[] = [];
     
-    // initiatesルール
+    // initiates rules
     if (rules.initiates) {
       for (const init of rules.initiates) {
         const pattern = init.pattern || `${init.fluent}(Subject, Object)`;
@@ -47,7 +47,7 @@ export class DynamicRuleLearner {
       }
     }
     
-    // terminatesルール
+    // terminates rules
     if (rules.terminates) {
       for (const term of rules.terminates) {
         const pattern = term.pattern || `${term.fluent}(Subject, _)`;
@@ -57,14 +57,14 @@ export class DynamicRuleLearner {
       }
     }
     
-    // 瞬間的アクション
+    // Instantaneous actions
     if (rules.type === 'instantaneous') {
       prologRules.push(
         `instantaneous("${verb}").`
       );
     }
     
-    // Prologエンジンにロード
+    // Load into Prolog engine
     const ruleString = prologRules.join('\n');
     this.ruleCache.set(verb, ruleString);
     if (this.engine.loadFacts) {
@@ -73,14 +73,14 @@ export class DynamicRuleLearner {
   }
   
   /**
-   * 学習済みルールを取得
+   * Get learned rules
    */
   getLearnedRules(): Map<string, any> {
     return this.learnedRules;
   }
   
   /**
-   * ルールをエクスポート（永続化用）
+   * Export rules (for persistence)
    */
   exportRules(): string {
     return JSON.stringify(
@@ -91,7 +91,7 @@ export class DynamicRuleLearner {
   }
   
   /**
-   * ルールをインポート（復元用）
+   * Import rules (for restoration)
    */
   async importRules(rulesJson: string): Promise<void> {
     try {
@@ -99,7 +99,7 @@ export class DynamicRuleLearner {
       for (const [verb, rule] of rules) {
         this.learnedRules.set(verb, rule);
         
-        // Prologルールも復元
+        // Also restore Prolog rules
         if (this.ruleCache.has(verb) && this.engine.loadFacts) {
           await this.engine.loadFacts(this.ruleCache.get(verb)!);
         }
@@ -110,21 +110,21 @@ export class DynamicRuleLearner {
   }
   
   /**
-   * 特定の動詞のルールを取得
+   * Get rules for specific verb
    */
   getRuleForVerb(verb: string): any | undefined {
     return this.learnedRules.get(verb);
   }
   
   /**
-   * キャッシュされたPrologルールを取得
+   * Get cached Prolog rules
    */
   getCachedPrologRule(verb: string): string | undefined {
     return this.ruleCache.get(verb);
   }
   
   /**
-   * すべてのルールをクリア
+   * Clear all rules
    */
   clearRules(): void {
     this.learnedRules.clear();

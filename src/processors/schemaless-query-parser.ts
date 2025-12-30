@@ -34,7 +34,7 @@ IMPORTANT: For targetDomain, use lowercase singular nouns that represent states/
 Examples:
 Q: "Where does John live?" → subject: "john", targetDomain: "location", temporalScope: "CURRENT"
 Q: "What is his current role?" → subject: null, targetDomain: "role", temporalScope: "CURRENT"
-Q: "太郎の趣味は何ですか？" → subject: "taro", targetDomain: "hobby", temporalScope: "CURRENT"
+Q: "What is Taro's hobby?" (Japanese) → subject: "taro", targetDomain: "hobby", temporalScope: "CURRENT"
 Q: "What was her job in 2015?" → subject: null, targetDomain: "role", temporalScope: "SPECIFIC_TIME", specificTime: "2015"
 Q: "Is he married?" → subject: null, targetDomain: "marital_status", temporalScope: "CURRENT"
 Q: "What car does she drive?" → subject: null, targetDomain: "vehicle", temporalScope: "CURRENT"

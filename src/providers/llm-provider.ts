@@ -315,7 +315,7 @@ Important:
 
 Examples:
 - "What is Taro's wife's name?" -> {"queryType":"what","subject":"Taro","predicate":"married","object":null}
-- "太郎の妻の名前は?" -> {"queryType":"what","subject":"太郎","predicate":"married","object":null}
+- "What is Taro's wife's name?" (Japanese) -> {"queryType":"what","subject":"Taro","predicate":"married","object":null}
 - "How many children does Taro have?" -> {"queryType":"how","subject":"Taro","predicate":"have","object":"children"}
 
 Return ONLY valid JSON:

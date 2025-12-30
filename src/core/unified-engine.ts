@@ -13,7 +13,7 @@ import { EventCalculusProcessor, type EventCalculusStructure } from '../processo
 import { SchemalessQueryParser } from '../processors/schemaless-query-parser.js';
 
 /**
- * 統合スキーマレスエンジン
+ * Unified Schemaless Engine
  */
 export class UnifiedSchemalessEngine {
   private learner: DynamicRuleLearner;
@@ -62,7 +62,7 @@ export class UnifiedSchemalessEngine {
   }
   
   async initialize() {
-    // Event Calculus基本ルール - Complete implementation
+    // Event Calculus base rules - Complete implementation
     const baseRules = `
 % Event Calculus Rules for WhenM - Generic Version
 % No hardcoded verbs - LLM provides semantic decisions
@@ -129,7 +129,7 @@ all_current_states(Subject, States) :-
   }
   
   /**
-   * 自然言語イベントを記憶（中核機能）
+   * Remember natural language events (core function)
    */
   async remember(text: string, date?: string | Date): Promise<void> {
     const timestamp = this.toTimestamp(date);
@@ -173,7 +173,7 @@ all_current_states(Subject, States) :-
     // Parse for backward compatibility
     const parsed = await this.llm.parseEvent(processedText);
     
-    // 複合イベントの処理
+    // Process compound events
     const events = Array.isArray(parsed) ? parsed : [parsed];
     
     for (const event of events) {
@@ -183,12 +183,12 @@ all_current_states(Subject, States) :-
         console.log(`[UnifiedEngine] Event: ${subject} ${verb} ${object || ''}`);
       }
       
-      // 動的ルール学習
+      // Dynamic rule learning
       if (this.options.autoLearn) {
         await this.learner.learnVerb(verb, text);
       }
       
-      // イベント記録
+      // Event recording
       const eventRecord = {
         event: { subject, verb, object, context },
         text: processedText,
@@ -208,7 +208,7 @@ all_current_states(Subject, States) :-
   }
   
   /**
-   * 自然言語で質問
+   * Ask questions in natural language
    */
   async ask(question: string, date?: string | Date): Promise<string> {
     if (this.options.debug) {
@@ -224,7 +224,7 @@ all_current_states(Subject, States) :-
     
     // Generic Prolog query for ANY domain (truly schemaless)
     if (parsed.temporalScope === 'CURRENT' && parsed.targetDomain && this.engine.query) {
-      const subject = (parsed.subject || 'taro').toLowerCase().replace('太郎', 'taro');
+      const subject = (parsed.subject || 'taro').toLowerCase();
       const domain = parsed.targetDomain.toLowerCase();
       
       // Universal query using findall - works for both single and multiple values
@@ -300,7 +300,7 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
   }
   
   /**
-   * 構造化クエリ実行 (Prolog-only, truly schemaless)
+   * Execute structured query (Prolog-only, truly schemaless)
    */
   private async executeQuery(
     query: any, 
@@ -359,7 +359,7 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
   
   
   /**
-   * タイムスタンプ変換
+   * Convert to timestamp
    */
   private toTimestamp(date?: string | Date): number {
     if (!date) return Date.now();
@@ -371,7 +371,7 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
   }
   
   /**
-   * 日付文字列変換
+   * Convert to date string
    */
   private toDateString(date?: string | Date): string {
     if (!date) return new Date().toISOString();

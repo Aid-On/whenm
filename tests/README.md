@@ -1,40 +1,40 @@
 # WhenM Tests
 
-## ディレクトリ構成
+## Directory Structure
 
 ### `/locomo`
-LoCoMo (Long-term Conversational Memory) ベンチマークテスト
-- `test-locomo-load.js` - データ読み込み
-- `test-locomo-query.js` - クエリテスト
-- `test-locomo-massive.js` - 大規模データテスト（100+イベント）
+LoCoMo (Long-term Conversational Memory) Benchmark Tests
+- `test-locomo-load.js` - Data loading
+- `test-locomo-query.js` - Query tests
+- `test-locomo-massive.js` - Large-scale data tests (100+ events)
 
 ### `/integration`
-統合テストと自然言語クエリテスト
-- `test-natural-language.js` - NLクエリ全般
-- `test-cloudflare-*.js` - Cloudflare Workers AI統合
-- `test-live-*.js` - 実APIテスト
+Integration tests and natural language query tests
+- `test-natural-language.js` - General NL queries
+- `test-cloudflare-*.js` - Cloudflare Workers AI integration
+- `test-live-*.js` - Live API tests
 
 ### `/debug`
-デバッグとトラブルシューティング用
-- `test-debug-*.js` - 各種デバッグツール
-- `test-who-*.js` - WHOクエリデバッグ
-- `test-compound-*.js` - 複合イベント分解
+Debug and troubleshooting utilities
+- `test-debug-*.js` - Various debugging tools
+- `test-who-*.js` - WHO query debugging
+- `test-compound-*.js` - Compound event decomposition
 
 ### `/examples`
-使用例とシナリオテスト
-- `test-readme-*.js` - READMEの例の検証
-- `test-validation-scenarios.js` - バリデーションシナリオ
+Usage examples and scenario tests
+- `test-readme-*.js` - README example validation
+- `test-validation-scenarios.js` - Validation scenarios
 
-## 実行方法
+## How to Run
 
 ```bash
-# 特定のテストを実行
+# Run specific test
 node tests/locomo/test-locomo-massive.js
 
-# LoCoMoベンチマーク実行（順序重要）
-node tests/locomo/test-locomo-load.js    # データ準備
-node tests/locomo/test-locomo-query.js   # クエリテスト
+# Run LoCoMo benchmark (order matters)
+node tests/locomo/test-locomo-load.js    # Prepare data
+node tests/locomo/test-locomo-query.js   # Query tests
 
-# Cloudflare統合テスト
+# Cloudflare integration test
 node tests/integration/test-live-en.js
 ```

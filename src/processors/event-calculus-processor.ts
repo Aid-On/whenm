@@ -1,6 +1,6 @@
 /**
  * Event Calculus Processor
- * LLMが意味論的判断を行い、Prologが時間的計算を行う
+ * LLM makes semantic judgments, Prolog performs temporal calculations
  */
 
 import type { UnifiedLLMProvider } from '../providers/llm-provider.js';
@@ -26,7 +26,7 @@ export class EventCalculusProcessor {
   constructor(private llm: UnifiedLLMProvider) {}
 
   /**
-   * LLMに意味論的判断をさせてEvent Calculus構造を生成
+   * Generate Event Calculus structure using LLM semantic judgment
    */
   async structureForEventCalculus(text: string, timestamp: string): Promise<EventCalculusStructure> {
     const prompt = `
@@ -102,17 +102,17 @@ Return only JSON:`;
   }
 
   /**
-   * Prolog用のEvent Calculusファクトを生成
+   * Generate Event Calculus facts for Prolog
    */
   generatePrologFacts(event: EventCalculusStructure, eventId: string): string[] {
     const facts: string[] = [];
     const timestamp = Date.parse(event.timestamp);
     
-    // 基本イベント記録
+    // Basic event recording
     facts.push(`event_fact("${eventId}", "${event.subject}", "${event.verb}", "${event.object || 'nil'}").`);
     facts.push(`happens("${eventId}", ${timestamp}).`);
     
-    // Fluent操作
+    // Fluent operations
     if (event.affectedFluent) {
       const { domain, value, isExclusive } = event.affectedFluent;
       const fluent = `${domain}("${event.subject}", "${value}")`;
@@ -146,7 +146,7 @@ Return only JSON:`;
   }
 
   /**
-   * 現在の状態をPrologクエリ用に生成
+   * Generate current state for Prolog queries
    */
   generateStateQuery(subject: string, domain: string, time?: number): string {
     const t = time || Date.now();
@@ -154,7 +154,7 @@ Return only JSON:`;
   }
 
   /**
-   * 時点での全状態を取得するクエリ
+   * Query to get all states at a specific time
    */
   generateSnapshotQuery(subject: string, time?: number): string {
     const t = time || Date.now();

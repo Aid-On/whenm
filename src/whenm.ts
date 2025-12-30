@@ -18,7 +18,7 @@ import type { WhenMEngine } from './index.js';
 // Removed deprecated imports - only use ask() method for temporal reasoning
 
 /**
- * WhenM メインクラス
+ * WhenM Main Class
  * 
  * @example
  * ```typescript
@@ -34,10 +34,10 @@ import type { WhenMEngine } from './index.js';
  * // Gemini
  * const whenm = WhenM.gemini(process.env.GEMINI_API_KEY);
  * 
- * // カスタム
+ * // Custom
  * const whenm = WhenM.create({ ... });
  * 
- * // 使用
+ * // Usage
  * await whenm.remember("Alice became CEO");
  * await whenm.ask("What is Alice's role?");
  * ```
