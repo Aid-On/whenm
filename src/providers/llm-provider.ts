@@ -314,9 +314,9 @@ Important:
 - For "太郎の妻" questions, subject is "太郎", we're asking about a relation
 
 Examples:
-- "What is John's wife's name?" -> {"queryType":"what","subject":"John","predicate":"married","object":null}
-- "What is Alice's husband's name?" -> {"queryType":"what","subject":"Alice","predicate":"married","object":null}
-- "How many children does Sarah have?" -> {"queryType":"how","subject":"Sarah","predicate":"have","object":"children"}
+- "What is John's wife's name?" -> {"queryType":"what","subject":"john","predicate":"married","object":null}
+- "太郎の妻の名前は？" -> {"queryType":"what","subject":"taro","predicate":"married","object":null}
+- "How many children does Sarah have?" -> {"queryType":"how","subject":"sarah","predicate":"have","object":"children"}
 
 Return ONLY valid JSON:
 {
@@ -395,8 +395,8 @@ Instructions:
    - Example: "role when founded startup" means the role active when startup was founded
 
 Examples:
-- If data shows {subject: "John", verb: "born", date: "1990-05-15"} and question asks age in 2025, calculate: 2025 - 1990 = 35 years old
-- If data shows {subject: "Alice", verb: "married", object: "Bob"}, then Bob is the spouse
+- If data shows {subject: "taro", verb: "born", date: "1990-05-15"} and question asks age in 2025, calculate: 2025 - 1990 = 35 years old
+- If data shows {subject: "太郎", verb: "married", object: "花子"}, then 花子 is the spouse
 - If data has multiple events with "son born" or "daughter born", count them as children
 - If asking "what happened during stay in X", find events between "moved to X" and "left X" dates
 - If asking "what role when Y happened", find the most recent role change before Y's date

@@ -65,12 +65,12 @@ Important:
 - For unknown entities, transliterate or keep as-is with English explanation
 - Translate all objects, skills, items, etc. to English
 - Use consistent terminology - always use the same English term for the same concept:
-  - CEO, Chief Executive Officer, CEO (Japanese) → "CEO"
-  - CTO, Chief Technology Officer, CTO (Japanese) → "CTO"
-  - manager, manager (Japanese) → "manager"
-  - 100,000 volts (Japanese), Thunderbolt (Japanese) → "Thunderbolt"
-- Example: "Pikachu learned Thunderbolt" (Japanese) → "Pikachu learned Thunderbolt"
-- Example: "Tanaka became manager" (Japanese) → "Tanaka became manager"
+  - CEO, Chief Executive Officer, 最高経営責任者 → "CEO"
+  - CTO, Chief Technology Officer, 最高技術責任者 → "CTO"
+  - manager, マネージャー → "manager"
+  - 10万ボルト, サンダーボルト → "Thunderbolt"
+- Example: "ピカチュウが10万ボルトを覚えた" → "Pikachu learned Thunderbolt"
+- Example: "田中さんがマネージャーになった" → "Tanaka became manager"
 - Example: "Alice became Chief Executive Officer" → "Alice became CEO"
 - IMPORTANT: Do NOT add articles (a, an, the) that weren't in the original
 - Preserve temporal expressions but convert to English
