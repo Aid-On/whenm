@@ -1,6 +1,8 @@
 /**
  * Use cases from README - executable examples
- * Run with: node examples/use-cases.js
+ * Run with: 
+ *   - Mock provider: LLM_PROVIDER=mock node examples/use-cases.js
+ *   - Groq provider: GROQ_API_KEY=your-key node examples/use-cases.js
  */
 
 import { createMockEngine, createGroqEngine } from '../dist/index.js';
@@ -8,15 +10,14 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-// Auto-detect LLM provider
+// Use Groq if API key is provided, otherwise use Mock
 async function createEngine() {
-  const provider = process.env.LLM_PROVIDER || 'mock';
-  if (provider === 'mock' || !process.env.GROQ_API_KEY) {
-    console.log('Using Mock LLM provider');
-    return await createMockEngine();
-  } else {
+  if (process.env.GROQ_API_KEY) {
     console.log('Using Groq LLM provider');
     return await createGroqEngine(process.env.GROQ_API_KEY);
+  } else {
+    console.log('Using Mock LLM provider (set GROQ_API_KEY to use Groq)');
+    return await createMockEngine();
   }
 }
 

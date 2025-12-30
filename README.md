@@ -42,9 +42,9 @@ const memory = await WhenM.auto();
 const memory = await WhenM.mock();
 
 // Or use Groq (recommended for production)
-const memory = await WhenM.groq({
-  apiKey: process.env.GROQ_API_KEY  // Get from https://console.groq.com/keys
-});
+const memory = await WhenM.groq(
+  process.env.GROQ_API_KEY  // Get from https://console.groq.com/keys
+);
 
 // Remember events - any language, any domain
 await memory.remember("Alice joined as engineer", "2020-01-15");
@@ -154,17 +154,10 @@ await memory.ask("What happened in January?");
 await memory.ask("Who became manager this year?");
 await memory.ask("What is the current status of the project?");
 
-// Structured queries
-const events = await memory
-  .query()
-  .subject("Alice")
-  .between("2024-01-01", "2024-12-31")
-  .execute();
-
-// Timeline analysis
-const timeline = memory.timeline("Project-X");
-const statusInMarch = await timeline.at("2024-03-15");
-const recentChanges = await timeline.recent(30); // last 30 days
+// All queries use natural language through the ask() method
+const events = await memory.ask("What did Alice do between January and December 2024?");
+const statusInMarch = await memory.ask("What was Project-X status on March 15, 2024?");
+const recentChanges = await memory.ask("What happened with Project-X in the last 30 days?");
 ```
 
 ## Advanced Features
@@ -384,15 +377,12 @@ const review = await hr.ask("What achievements led to Sarah's promotion to Senio
 // → "Completed React certification and successfully led payment module project"
 
 // Compare growth between employees
-const sarahGrowth = await hr.timeline("Sarah").compare("2021-01-15", "2024-01-15");
-const johnGrowth = await hr.timeline("John").compare("2021-01-15", "2024-01-15");
-// → Objective career progression comparison
+const sarahGrowth = await hr.ask("How did Sarah's career progress from January 2021 to January 2024?");
+const johnGrowth = await hr.ask("How did John's career progress from January 2021 to January 2024?");
+// → Career progression comparison
 
 // Find high performers
-const fastGrowth = await hr.query()
-  .verb(["promoted", "awarded", "recognized"])
-  .last(12, 'months')
-  .distinct('subject');
+const fastGrowth = await hr.ask("Who was promoted, awarded, or recognized in the last 12 months?");
 // → List of employees with recent achievements
 ```
 
@@ -409,20 +399,14 @@ await medical.remember("Switched to losartan 50mg", "2020-09-05");
 await medical.remember("Blood pressure stabilized to normal", "2021-01-15"); // Multilingual support
 
 // Critical temporal queries for treatment decisions
-const currentMeds = await medical.timeline("Patient").now();
+const currentMeds = await medical.ask("What medication is the patient currently taking?");
 // → Current medication and conditions
 
 const medicationHistory = await medical.ask("Why was the medication changed in September 2020?");
 // → "Lisinopril caused dry cough side effect, switched to losartan"
 
 // Track treatment effectiveness over time
-const bpHistory = await medical.query()
-  .subject("Patient")
-  .verb(["measured", "recorded"])
-  .object("blood pressure")
-  .last(6, 'months')
-  .orderBy('time', 'asc')
-  .execute();
+const bpHistory = await medical.ask("What were the blood pressure measurements in the last 6 months?");
 // → Blood pressure trends for treatment evaluation
 ```
 
@@ -438,17 +422,14 @@ await agent.remember("Failed to solve bug with approach A", "2024-02-01");
 await agent.remember("Successfully solved bug with approach B", "2024-02-01");
 
 // Context-aware responses based on temporal memory
-const preferences = await agent.timeline("User").states();
+const preferences = await agent.ask("What are the user's preferences?");
 // → All current user preferences and learned patterns
 
 const debugging = await agent.ask("What debugging approach should I try?");
 // → "Use approach B, as approach A previously failed"
 
 // Learn from interaction patterns
-const interactions = await agent.query()
-  .verb(["failed", "succeeded", "errored"])
-  .last(30, 'days')
-  .execute();
+const interactions = await agent.ask("What failed, succeeded, or errored in the last 30 days?");
 // → Analyze success/failure patterns to improve
 ```
 
@@ -468,15 +449,11 @@ const rca = await ops.ask("What caused the API degradation?");
 // → "CPU spike led to connection pool exhaustion, causing API degradation"
 
 // Pattern detection across incidents
-const patterns = await ops.query()
-  .verb(["spiked", "exhausted", "degraded"])
-  .last(90, 'days')
-  .execute();
+const patterns = await ops.ask("What spiked, exhausted, or degraded in the last 90 days?");
 // → Identify recurring issues
 
 // Automated incident correlation
-const correlation = await ops.timeline("System")
-  .between("2024-03-15 14:00", "2024-03-15 15:00");
+const correlation = await ops.ask("What happened with the system between 2:00 PM and 3:00 PM on March 15, 2024?");
 // → Complete incident timeline for postmortem
 ```
 
@@ -497,15 +474,11 @@ const kycStatus = await audit.ask("Was KYC completed before the first transactio
 // → "Yes, KYC completed on Jan 16, first transaction on Feb 1"
 
 // Suspicious activity tracking
-const flagged = await audit.query()
-  .verb(["flagged", "suspended", "investigated"])
-  .between("2023-01-01", "2023-12-31")
-  .execute();
+const flagged = await audit.ask("What was flagged, suspended, or investigated in 2023?");
 // → All compliance events for regulatory reporting
 
 // Account state at any point for legal inquiries
-const snapshot = await audit.timeline("Account")
-  .at("2023-03-15");
+const snapshot = await audit.ask("What was the account status on March 15, 2023?");
 // → Exact account state when flagged
 ```
 
@@ -521,7 +494,7 @@ await game.remember("Player joined guild 'Knights'", "2024-01-02");
 await game.remember("Won guild battle", "2024-01-03"); // Multilingual support
 
 // Personalized gameplay based on history
-const achievements = await game.timeline("Player").states();
+const achievements = await game.ask("What titles and skills does the player have?");
 // → All titles, skills, and progression
 
 // Quest eligibility based on temporal conditions
@@ -529,10 +502,7 @@ const eligible = await game.ask("Can player start the 'Ancient Evil' quest?");
 // → "Yes, player has defeated Dragon Boss and joined a guild"
 
 // Leaderboard with time-based scoring
-const weeklyChamps = await game.query()
-  .verb(["defeated", "completed", "won"])
-  .last(7, 'days')
-  .distinct('subject');
+const weeklyChamps = await game.ask("Who defeated bosses, completed quests, or won battles in the last 7 days?");
 // → This week's most active players
 ```
 
@@ -552,15 +522,11 @@ const warning = await iot.ask("What signs preceded the bearing failure?");
 // → "Vibration increased, temperature rose, then noise detected"
 
 // Pattern recognition across fleet
-const maintenance = await iot.query()
-  .verb(["increased", "detected", "failed"])
-  .last(30, 'days')
-  .execute();
+const maintenance = await iot.ask("What increased, was detected, or failed in the last 30 days?");
 // → Identify machines showing similar patterns
 
 // Optimal maintenance scheduling
-const machineState = await iot.timeline("Machine-A")
-  .compare("2024-02-01", "2024-03-01");
+const machineState = await iot.ask("How did Machine-A's condition change from February to March 2024?");
 // → Degradation rate for maintenance planning
 ```
 
@@ -572,47 +538,41 @@ const machineState = await iot.timeline("Machine-A")
 Records an event at a specific time.
 
 #### `memory.ask(question: string)`
-Answers questions using temporal reasoning.
+Answers questions using temporal reasoning. This is the primary interface for all queries.
 
-#### `memory.query()`
-Returns a query builder for structured searches.
+#### `memory.remember(event: string, date?: string | Date)`
+Records an event at a specific time.
 
+### Query Interface
 
-### Query Builder API
-
-Complete fluent interface for structured queries:
+All queries are performed through natural language using the `ask()` method:
 
 ```typescript
-// Basic query methods
-memory.query()
-  .where({ subject: "Alice", verb: "learned" })  // Filter by multiple conditions
-  .subject("Alice")                              // Filter by entity (string or array)
-  .verb(["learned", "studied"])                  // Filter by action (string or array)
-  .object("Python")                               // Filter by target/object
-  .between("2024-01-01", "2024-12-31")          // Time range filter
-  .on("2024-06-15")                              // Specific date
-  .last(30, 'days')                              // Recent time period (days/weeks/months/years)
-  .orderBy('time', 'desc')                       // Sort (time/subject/verb/object, asc/desc)
-  .limit(10)                                      // Limit results
-  .offset(20)                                     // Skip results (pagination)
-  .page(2, 10)                                    // Page number and size
-  .execute()                                      // → Promise<Event[]>
+// Temporal queries
+await memory.ask("What happened in January 2024?");
+await memory.ask("What is Alice's current role?");
+await memory.ask("When did Bob learn Python?");
+await memory.ask("Who joined the company last year?");
 
-// Aggregation methods
-.count()                  // → Promise<number> - Count matching events
-.exists()                 // → Promise<boolean> - Check if any match
-.first()                  // → Promise<Event | null> - Get first match
-.distinct('subject')      // → Promise<string[]> - Get unique values
+// State queries
+await memory.ask("What skills does Alice have?");
+await memory.ask("Where does Bob currently work?");
 
-// Chaining example
-const recentLearning = await memory.query()
-  .subject(["Alice", "Bob"])
-  .verb("learned")
-  .last(90, 'days')
-  .orderBy('time', 'desc')
-  .limit(5)
-  .execute();
+// Historical queries
+await memory.ask("What was the status on March 15?");
+await memory.ask("How did things change between February and April?");
+
+// Complex queries
+await memory.ask("Who was promoted in the last 12 months?");
+await memory.ask("What failures occurred before the system recovery?");
 ```
+
+The LLM-powered query system understands:
+- Temporal relationships (before, after, during, between)
+- State transitions (became, changed, updated)
+- Current vs historical states
+- Aggregations (who, what, when, how many)
+- Causal relationships (why, what caused)
 
 
 ## Requirements
@@ -660,11 +620,9 @@ npm run test:watch
 ## Roadmap
 
 ### Upcoming Features
-- **Timeline API**: Full state tracking and temporal snapshots
-  - `timeline.at(time)` - Complete state at any point in time
-  - `timeline.states()` - Current state tracking
-  - `timeline.compare()` - State change analysis
-- **Advanced Persistence**: Additional storage backends
+- **Query Builder API**: Structured query interface (currently all queries use natural language)
+- **Timeline API**: Dedicated timeline tracking and analysis
+- **Advanced Persistence**: Production-ready storage backends
 - **Performance Optimizations**: Faster Prolog integration
 - **Extended Language Support**: More LLM providers
 
