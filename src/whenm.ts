@@ -15,8 +15,7 @@ import {
 } from './final-engine.js';
 import { UniLLMProvider, type UnifiedLLMProvider } from './llm-provider.js';
 import type { WhenMEngine } from './index.js';
-import { QueryBuilder, Timeline, createQueryBuilder, createTimeline } from './query-builder.js';
-import { NaturalLanguageQuery, NaturalLanguageQueryChain } from './natural-query.js';
+// Removed deprecated imports - only use ask() method for temporal reasoning
 
 /**
  * WhenM メインクラス
@@ -194,36 +193,7 @@ export class WhenM {
     return null;
   }
 
-  /**
-   * Create a modern query builder
-   * 
-   * @example
-   * ```typescript
-   * const events = await memory
-   *   .query()
-   *   .where({ subject: "Alice" })
-   *   .last(30, 'days')
-   *   .orderBy('time', 'desc')
-   *   .execute();
-   * ```
-   */
-  query(): QueryBuilder {
-    return createQueryBuilder(this.engine.getEngine());
-  }
-
-  /**
-   * Create a timeline for a specific entity
-   * 
-   * @example
-   * ```typescript
-   * const timeline = memory.timeline("Alice");
-   * const snapshot = await timeline.at("2023-06-15");
-   * const changes = await timeline.recent(30);
-   * ```
-   */
-  timeline(entity: string): Timeline {
-    return createTimeline(entity, this.engine.getEngine());
-  }
+  // query() and timeline() methods removed - use ask() instead for proper temporal reasoning
 
   /**
    * Get recent events across all entities
@@ -233,8 +203,9 @@ export class WhenM {
    * const recentEvents = await memory.recent(7); // Last 7 days
    * ```
    */
-  async recent(days: number = 30): Promise<any[]> {
-    return this.query().last(days, 'days').orderBy('time', 'desc').execute();
+  async recent(days: number = 30): Promise<string> {
+    // Use ask() for proper temporal reasoning
+    return this.ask(`What events happened in the last ${days} days?`);
   }
 
   /**
@@ -246,47 +217,12 @@ export class WhenM {
    * const learningEvents = await memory.search("learned");
    * ```
    */
-  async search(keyword: string): Promise<any[]> {
-    // This is a simplified search - could be enhanced with LLM
-    const engineCore = this.engine.getEngine();
-    if (!engineCore.allEvents) {
-      return [];
-    }
-    const allEvents = await engineCore.allEvents();
-    return allEvents.filter((e: any) => 
-      e.event.toLowerCase().includes(keyword.toLowerCase())
-    );
+  async search(keyword: string): Promise<string> {
+    // Use ask() for search with proper reasoning
+    return this.ask(`What events contain "${keyword}"?`);
   }
 
-  /**
-   * Natural Language Query Interface
-   * 
-   * @example
-   * ```typescript
-   * // Simple direct queries
-   * await memory.nl("What did Alice do last month?");
-   * await memory.nl("Show me all promotions in 2024");
-   * await memory.nl("How many times did Bob learn something?");
-   * 
-   * // Chainable with modifiers
-   * await memory
-   *   .nl("What did Alice do")
-   *   .during("last month")
-   *   .limit(10);
-   * 
-   * await memory
-   *   .nl("Show all learning events")
-   *   .about("Bob")
-   *   .recent(30);
-   * ```
-   */
-  nl(query: string): NaturalLanguageQueryChain {
-    const nlQuery = new NaturalLanguageQuery(
-      this.engine.getEngine(),
-      this.engine.getLLM()
-    );
-    return new NaturalLanguageQueryChain(nlQuery, query);
-  }
+  // nl() method removed - use ask() instead for proper temporal reasoning
 
   /**
    * Get all events
@@ -296,8 +232,8 @@ export class WhenM {
     if (engine.getEvents) {
       return engine.getEvents(options);
     }
-    // Fallback to query
-    return this.query().limit(options?.limit || 1000).execute();
+    // Return empty array if not available
+    return [];
   }
 
   /**

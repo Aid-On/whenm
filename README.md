@@ -54,6 +54,20 @@ await memory.ask("What did Pikachu learn?");
 // → "Thunderbolt (100,000 volts)"
 ```
 
+## ⚠️ Important: Use the Right Method
+
+**For complex temporal reasoning, always use the `ask()` method:**
+```typescript
+// ✅ CORRECT - Uses Event Calculus + Prolog reasoning
+await memory.ask("What was Alice's role in 2021?");
+
+// ⚠️ DEPRECATED - Uses simple filtering, no temporal reasoning
+await memory.query().subject("Alice").execute();  // Don't use for complex queries
+await memory.nl("What did Alice do?");            // Don't use for complex queries
+```
+
+The `query()` and `nl()` methods are deprecated and will show warnings. They use simple JavaScript filtering without the powerful Event Calculus reasoning engine.
+
 ## Key Features
 
 ### 🌍 Truly Schemaless

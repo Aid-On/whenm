@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.1] - 2025-12-30
+
+### Fixed
+- Removed deprecated query(), nl(), and timeline() methods  
+- All temporal queries now use the ask() method with Event Calculus reasoning
+- Deleted old schema.ts file with hardcoded mappings
+- Unified all routes to use UnifiedSchemalessEngine for proper temporal reasoning
+
+### Changed
+- search() and recent() now use ask() internally for consistency
+- Updated README to clearly indicate which methods to use
+
 ## [0.2.0] - 2025-12-30
 
 ### Restored Original Implementation

@@ -1,6 +1,6 @@
 {
   "name": "@aid-on/whenm",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Time-aware memory system for LLMs with Event Calculus and Prolog reasoning",
   "type": "module",
   "main": "dist/index.js",

@@ -19,7 +19,7 @@ export class UnifiedSchemalessEngine {
   private learner: DynamicRuleLearner;
   private refiner: QueryRefinementLayer;
   private persistence?: PersistencePlugin;
-  private eventLog: Array<{ event: any; timestamp: number; date: string }> = [];
+  public _eventLog: Array<{ event: any; timestamp: number; date: string; text?: string }> = [];
   private ecProcessor: EventCalculusProcessor;
   private ecEvents: EventCalculusStructure[] = [];
   private queryParser: SchemalessQueryParser;
@@ -191,10 +191,11 @@ all_current_states(Subject, States) :-
       // イベント記録
       const eventRecord = {
         event: { subject, verb, object, context },
+        text: processedText,
         timestamp,
         date: dateStr
       };
-      this.eventLog.push(eventRecord);
+      this._eventLog.push(eventRecord);
       
       // Legacy compatibility - may be removed in future
       if (this.engine.remember) {
@@ -413,14 +414,22 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
    * Get all events
    */
   async getEvents(): Promise<any[]> {
-    return this.eventLog;
+    return this._eventLog;
+  }
+
+  getEventLog(): any[] {
+    return this._eventLog;
+  }
+
+  async allEvents(): Promise<any[]> {
+    return this._eventLog;
   }
   
   /**
    * Reset engine
    */
   async reset(): Promise<void> {
-    this.eventLog = [];
+    this._eventLog = [];
     this.learner.clearRules();
     this.ecEvents = [];
     if (this.engine.reset) {
@@ -443,7 +452,7 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
     }
     
     // Save all events from log
-    const events = this.eventLog.map(e => ({
+    const events = this._eventLog.map(e => ({
       event: typeof e.event === 'string' ? e.event : JSON.stringify(e.event),
       time: e.date,
       metadata: { timestamp: e.timestamp }
@@ -515,7 +524,7 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
     }
     
     // Export from memory
-    return this.eventLog
+    return this._eventLog
       .map(e => `happens(${JSON.stringify(e.event)}, "${e.date}").`)
       .join('\n');
   }
