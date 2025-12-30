@@ -236,7 +236,8 @@ export async function createCloudflareEngine(accountId: string, apiKey: string, 
     llm: {
       provider: 'cloudflare',
       apiKey,
-      cloudflare: { accountId, email }
+      accountId,
+      email
     }
   });
 }

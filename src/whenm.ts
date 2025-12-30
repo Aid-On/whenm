@@ -97,10 +97,8 @@ export class WhenM {
           llm: {
             provider: 'cloudflare',
             apiKey: process.env.CLOUDFLARE_API_KEY,
-            cloudflare: {
-              accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
-              email: process.env.CLOUDFLARE_EMAIL
-            }
+            accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
+            email: process.env.CLOUDFLARE_EMAIL
           },
           ...options
         });

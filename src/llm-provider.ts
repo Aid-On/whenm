@@ -63,13 +63,10 @@ export interface UnifiedLLMProvider {
  */
 export interface UniLLMConfig {
   provider: 'cloudflare' | 'groq' | 'gemini' | 'mock';
-  apiKey?: string;  // Universal API key field
-  model?: string;   // Model name/ID
-  // Provider-specific optional fields
-  cloudflare?: {
-    accountId?: string;
-    email?: string;
-  };
+  apiKey?: string;      // Universal API key field
+  model?: string;        // Model name/ID
+  accountId?: string;    // For Cloudflare (unified at top level)
+  email?: string;        // For Cloudflare (unified at top level)
 }
 
 /**
@@ -140,8 +137,8 @@ export class UniLLMProvider implements UnifiedLLMProvider {
     
     switch (this.config.provider) {
       case 'cloudflare':
-        credentials.cloudflareAccountId = this.config.cloudflare?.accountId;
-        credentials.cloudflareEmail = this.config.cloudflare?.email;
+        credentials.cloudflareAccountId = this.config.accountId;
+        credentials.cloudflareEmail = this.config.email;
         credentials.cloudflareApiKey = this.config.apiKey;
         break;
       case 'groq':
