@@ -10,7 +10,7 @@ describe('Event Calculus Performance', () => {
   bench('Single event insertion', async () => {
     const engine = await createMockEngine();
     await engine.remember('user learned python', '2024-01-01');
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 
   bench('100 events insertion', async () => {
@@ -18,14 +18,14 @@ describe('Event Calculus Performance', () => {
     for (let i = 0; i < 100; i++) {
       await engine.remember(`user learned skill_${i}`, `2024-01-${String(i % 28 + 1).padStart(2, '0')}`);
     }
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 
   bench('Single fluent query', async () => {
     const engine = await createMockEngine();
     await engine.remember('user learned python', '2024-01-01');
     await engine.ask('Does user know python?', '2024-06-01');
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 
   bench('Query with 100 events', async () => {
@@ -39,7 +39,7 @@ describe('Event Calculus Performance', () => {
     // Benchmark: Query all holding fluents
     await engine.ask('all_holding("2024-06-01", Fluents)');
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 
   bench('Complex timeline query', async () => {
@@ -58,7 +58,7 @@ describe('Event Calculus Performance', () => {
     await engine.ask('Is user role tech_lead?', '2024-09-01');
     await engine.ask('Does user know python?', '2024-09-01');
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 
   bench('Termination checking (clipped)', async () => {
@@ -73,7 +73,7 @@ describe('Event Calculus Performance', () => {
     // Benchmark: Check terminated fluents
     await engine.ask('Is user member of club_25?', '2024-08-01');
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 
   bench('Singular fluent replacement', async () => {
@@ -86,6 +86,6 @@ describe('Event Calculus Performance', () => {
     
     await engine.ask('Is user role_9?', '2024-12-01');
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 });

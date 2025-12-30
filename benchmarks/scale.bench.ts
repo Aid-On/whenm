@@ -19,7 +19,7 @@ describe('Scale Testing', () => {
       );
     }
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   }, { timeout: 30000 });
 
   bench('Query with 500 events (no terminations)', async () => {
@@ -34,7 +34,7 @@ describe('Scale Testing', () => {
     // Benchmark query
     await engine.ask('What are all the facts?', '2024-12-01');
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   }, { timeout: 20000 });
 
   bench('Query with 500 events (with terminations)', async () => {
@@ -52,7 +52,7 @@ describe('Scale Testing', () => {
     // Benchmark query
     await engine.ask('What are all the facts?', '2024-12-01');
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   }, { timeout: 20000 });
 
   bench('Complex query on 1000 events', async () => {
@@ -86,7 +86,7 @@ describe('Scale Testing', () => {
     await engine.ask('Does user_5 know skill_5?', '2024-12-01');
     await engine.ask('Is user_5 member of group_51?', '2024-12-01');;
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   }, { timeout: 30000 });
 
   bench('Point-in-time query (100 events)', async () => {
@@ -107,7 +107,7 @@ describe('Scale Testing', () => {
     // Benchmark: Get all facts at specific time
     await engine.ask('What are all facts?', '2024-06-15');;
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 
   bench('Timeline traversal (past to present)', async () => {
@@ -137,6 +137,6 @@ describe('Scale Testing', () => {
       await engine.ask('What is the current state?', date);;
     }
     
-    await // cleanup;
+    // cleanup not needed with mock engine
   });
 });
