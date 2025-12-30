@@ -123,6 +123,14 @@ export class WhenM {
   }
 
   /**
+   * Create WhenM instance with mock LLM for testing
+   */
+  static async mock(options?: CreateEngineOptions): Promise<WhenM> {
+    const engine = await createUnifiedEngine({ llm: 'mock', ...options });
+    return new WhenM(engine);
+  }
+
+  /**
    * Create WhenM instance with Cloudflare Workers AI
    */
   static async cloudflare(options: {

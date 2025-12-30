@@ -3,10 +3,23 @@
  * Shows how WhenM handles overlapping events and state changes
  */
 
-import { createUnifiedEngine } from '../dist/index.js';
+import { createUnifiedEngine, createMockEngine, createGroqEngine } from '../dist/index.js';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 async function complexTimeline() {
-  const engine = await createUnifiedEngine();
+  // Use mock by default or Groq if API key is available
+  let engine;
+  
+  if (process.env.GROQ_API_KEY && process.env.LLM_PROVIDER !== 'mock') {
+    console.log('Using Groq LLM provider\n');
+    engine = await createGroqEngine(process.env.GROQ_API_KEY, 'llama-3.3-70b-versatile');
+  } else {
+    console.log('Using mock LLM provider (set GROQ_API_KEY for real LLM)\n');
+    engine = await createMockEngine();
+  }
 
   console.log('=== Complex Timeline Example ===\n');
 

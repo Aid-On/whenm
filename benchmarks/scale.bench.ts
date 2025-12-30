@@ -4,11 +4,11 @@
  */
 
 import { describe, bench } from 'vitest';
-import { createUnifiedEngine } from '../src/index';
+import { createMockEngine } from '../src/index';
 
 describe('Scale Testing', () => {
   bench('Insert 1000 events', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     for (let i = 0; i < 1000; i++) {
       const day = String((i % 28) + 1).padStart(2, '0');
@@ -23,7 +23,7 @@ describe('Scale Testing', () => {
   }, { timeout: 30000 });
 
   bench('Query with 500 events (no terminations)', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup
     for (let i = 0; i < 500; i++) {
@@ -38,7 +38,7 @@ describe('Scale Testing', () => {
   }, { timeout: 20000 });
 
   bench('Query with 500 events (with terminations)', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup: Half events are terminated
     for (let i = 0; i < 250; i++) {
@@ -56,7 +56,7 @@ describe('Scale Testing', () => {
   }, { timeout: 20000 });
 
   bench('Complex query on 1000 events', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup: Mix of different event types
     for (let i = 0; i < 1000; i++) {
@@ -90,7 +90,7 @@ describe('Scale Testing', () => {
   }, { timeout: 30000 });
 
   bench('Point-in-time query (100 events)', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup timeline with various events
     for (let i = 0; i < 100; i++) {
@@ -111,7 +111,7 @@ describe('Scale Testing', () => {
   });
 
   bench('Timeline traversal (past to present)', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup: Create events throughout the year
     const events = [

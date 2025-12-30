@@ -4,17 +4,17 @@
  */
 
 import { describe, bench } from 'vitest';
-import { createUnifiedEngine } from '../src/index';
+import { createMockEngine } from '../src/index';
 
 describe('Event Calculus Performance', () => {
   bench('Single event insertion', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     await engine.remember('user learned python', '2024-01-01');
     await // cleanup;
   });
 
   bench('100 events insertion', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     for (let i = 0; i < 100; i++) {
       await engine.remember(`user learned skill_${i}`, `2024-01-${String(i % 28 + 1).padStart(2, '0')}`);
     }
@@ -22,14 +22,14 @@ describe('Event Calculus Performance', () => {
   });
 
   bench('Single fluent query', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     await engine.remember('user learned python', '2024-01-01');
     await engine.ask('Does user know python?', '2024-06-01');
     await // cleanup;
   });
 
   bench('Query with 100 events', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup: Add 100 events
     for (let i = 0; i < 100; i++) {
@@ -43,7 +43,7 @@ describe('Event Calculus Performance', () => {
   });
 
   bench('Complex timeline query', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup: Create complex timeline
     await engine.remember('user joined company_a', '2024-01-01');
@@ -62,7 +62,7 @@ describe('Event Calculus Performance', () => {
   });
 
   bench('Termination checking (clipped)', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup: Events with terminations
     for (let i = 0; i < 50; i++) {
@@ -77,7 +77,7 @@ describe('Event Calculus Performance', () => {
   });
 
   bench('Singular fluent replacement', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Benchmark: Multiple role changes
     for (let i = 0; i < 10; i++) {

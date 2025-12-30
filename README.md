@@ -24,16 +24,27 @@ WhenM is a **schemaless temporal memory system** that gives AI applications the 
 
 ## Quick Start
 
+```bash
+# Install
+npm install @aid-on/whenm
+
+# Setup (copy and edit .env)
+cp .env.example .env
+```
+
 ```typescript
 import { WhenM } from '@aid-on/whenm';
 
-// Initialize with Cloudflare AI
-const memory = await WhenM.cloudflare({
-  accountId: process.env.CLOUDFLARE_ACCOUNT_ID,
-  apiKey: process.env.CLOUDFLARE_API_KEY,
-  email: process.env.CLOUDFLARE_EMAIL
-});
+// Initialize (uses mock LLM by default, or your API keys from .env)
+const memory = await WhenM.auto();
 
+// Or explicitly use mock for testing
+const memory = await WhenM.mock();
+
+// Or use Groq (recommended for production)
+const memory = await WhenM.groq({
+  apiKey: process.env.GROQ_API_KEY  // Get from https://console.groq.com/keys
+});
 
 // Remember events - any language, any domain
 await memory.remember("Alice joined as engineer", "2020-01-15");
@@ -49,9 +60,6 @@ await memory.ask("アリスの現在の役職は？");
 
 await memory.ask("ピカチュウはいつ10万ボルトを覚えた？");
 // → "2023年1月1日"
-
-await memory.ask("What did Pikachu learn?");
-// → "Thunderbolt (100,000 volts)"
 ```
 
 ## Key Features

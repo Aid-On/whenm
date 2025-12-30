@@ -4,17 +4,17 @@
  */
 
 import { describe, bench } from 'vitest';
-import { createUnifiedEngine } from '../src/index';
+import { createMockEngine } from '../src/index';
 
 describe('Memory Operations Performance', () => {
   bench('Simple record operation', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     await engine.remember('user learned Python', '2024-01-01');
     // cleanup
   });
 
   bench('Batch record (10 events)', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     const events = [
       'user learned Python',
       'user joined chess club', 
@@ -36,14 +36,14 @@ describe('Memory Operations Performance', () => {
   });
 
   bench('Simple ask query', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     await engine.remember('user learned Python', '2024-01-01');
     await engine.ask('Does user know Python?', '2024-06-01');
     // cleanup
   });
 
   bench('Complex state query', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup
     await engine.remember('user learned Python', '2024-01-01');
@@ -58,7 +58,7 @@ describe('Memory Operations Performance', () => {
   });
 
   bench('Historical query', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup timeline
     await engine.remember('user joined CompanyA', '2024-01-01');
@@ -73,7 +73,7 @@ describe('Memory Operations Performance', () => {
   });
 
   bench('getAllFacts with 50 active fluents', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Setup: Create 50 different facts
     for (let i = 0; i < 50; i++) {
@@ -93,7 +93,7 @@ describe('Memory Operations Performance', () => {
   });
 
   bench('Mixed operations sequence', async () => {
-    const engine = await createUnifiedEngine();
+    const engine = await createMockEngine();
     
     // Typical usage pattern
     await engine.remember('user started at Google', '2024-01-01');

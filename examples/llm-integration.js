@@ -3,14 +3,27 @@
  * Shows how to use WhenM with LLM for natural language understanding
  */
 
-import { createGroqEngine } from '../dist/index.js';
+import { createGroqEngine, createMockEngine } from '../dist/index.js';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 async function llmIntegrationExample() {
-  // Create engine with Groq LLM
-  const engine = await createGroqEngine(
-    process.env.GROQ_API_KEY,
-    'llama-3.3-70b-versatile'
-  );
+  // Create engine with Groq LLM or mock
+  let engine;
+  
+  if (process.env.GROQ_API_KEY && process.env.LLM_PROVIDER !== 'mock') {
+    console.log('Using Groq LLM provider for advanced natural language processing\n');
+    engine = await createGroqEngine(
+      process.env.GROQ_API_KEY,
+      'llama-3.3-70b-versatile'
+    );
+  } else {
+    console.log('Using mock LLM provider (limited functionality)\n');
+    console.log('For full functionality, set GROQ_API_KEY in .env\n');
+    engine = await createMockEngine();
+  }
 
   console.log('=== LLM Integration Example ===\n');
   console.log('Using natural language to interact with temporal memory\n');
@@ -92,10 +105,5 @@ async function llmIntegrationExample() {
   console.log('Answer:', reasoning);
 }
 
-// Note: Requires GROQ_API_KEY environment variable
-if (process.env.GROQ_API_KEY) {
-  llmIntegrationExample().catch(console.error);
-} else {
-  console.log('Please set GROQ_API_KEY environment variable to run this example');
-  console.log('Get your API key from: https://console.groq.com/keys');
-}
+// Run with mock or real LLM based on environment
+llmIntegrationExample().catch(console.error);

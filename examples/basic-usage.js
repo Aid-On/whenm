@@ -3,11 +3,29 @@
  * Demonstrates the core functionality of WhenM Event Calculus
  */
 
-import { createUnifiedEngine } from '../dist/index.js';
+import { createUnifiedEngine, createMockEngine } from '../dist/index.js';
+import dotenv from 'dotenv';
+
+// Load environment variables
+dotenv.config();
 
 async function basicExample() {
-  // Create a new WhenM engine instance
-  const engine = await createUnifiedEngine();
+  // Create engine based on environment or use mock by default
+  const provider = process.env.LLM_PROVIDER || 'mock';
+  let engine;
+  
+  if (provider === 'mock' || !process.env.GROQ_API_KEY) {
+    console.log('Using mock LLM provider (set GROQ_API_KEY for real LLM)\n');
+    engine = await createMockEngine();
+  } else {
+    engine = await createUnifiedEngine({
+      llm: {
+        provider: 'groq',
+        apiKey: process.env.GROQ_API_KEY,
+        model: 'llama-3.3-70b-versatile'
+      }
+    });
+  }
 
   console.log('=== Basic WhenM Usage Example ===\n');
 
