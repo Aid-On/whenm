@@ -37,3 +37,8 @@ jobs:
       env:
         CI: true
     
+    - name: Run Prolog tests (Trealla)
+      run: npm run test:prolog
+      env:
+        CI: true
+    
