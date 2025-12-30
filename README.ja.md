@@ -54,20 +54,6 @@ await memory.ask("What did Pikachu learn?");
 // → "Thunderbolt (100,000 volts)"
 ```
 
-## ⚠️ 重要：正しいメソッドを使用してください
-
-**複雑な時間推論には必ず `ask()` メソッドを使用してください：**
-```typescript
-// ✅ 正しい - Event Calculus + Prolog推論を使用
-await memory.ask("アリスの2021年の役職は？");
-
-// ⚠️ 非推奨 - 単純なフィルタリング、時間推論なし
-await memory.query().subject("Alice").execute();  // 複雑なクエリには使用しない
-await memory.nl("アリスは何をした？");           // 複雑なクエリには使用しない
-```
-
-`query()` と `nl()` メソッドは非推奨で、警告が表示されます。これらは強力なEvent Calculus推論エンジンを使用せず、単純なJavaScriptフィルタリングを使用します。
-
 ## 主な機能
 
 ### 🌍 真のスキーマレス

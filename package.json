@@ -1,7 +1,7 @@
 {
   "name": "@aid-on/whenm",
-  "version": "0.3.2",
-  "description": "Time-aware memory system for LLMs with Event Calculus and Prolog reasoning",
+  "version": "0.3.3",
+  "description": "Time-aware memory system that understands when things happened, not just what happened",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -38,13 +38,14 @@
     "vitest": "^2.1.8"
   },
   "keywords": [
+    "temporal-memory",
     "event-calculus",
     "prolog",
     "temporal-reasoning",
+    "time-aware",
     "llm",
-    "memory",
-    "edge-computing",
-    "cloudflare-workers"
+    "ai-memory",
+    "schemaless"
   ],
   "author": "Aid-On Team",
   "repository": {
