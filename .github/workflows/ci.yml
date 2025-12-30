@@ -37,39 +37,3 @@ jobs:
       env:
         CI: true
     
-  publish:
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    
-    steps:
-    - uses: actions/checkout@v4
-    
-    - uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-        registry-url: 'https://registry.npmjs.org'
-        cache: 'npm'
-    
-    - run: npm ci
-    
-    - run: npm run build
-    
-    - name: Check if version changed
-      id: version-check
-      run: |
-        PUBLISHED_VERSION=$(npm view @aid-on/whenm version 2>/dev/null || echo "0.0.0")
-        PACKAGE_VERSION=$(node -p "require('./package.json').version")
-        if [ "$PUBLISHED_VERSION" != "$PACKAGE_VERSION" ]; then
-          echo "needs_publish=true" >> $GITHUB_OUTPUT
-          echo "Version changed from $PUBLISHED_VERSION to $PACKAGE_VERSION"
-        else
-          echo "needs_publish=false" >> $GITHUB_OUTPUT
-          echo "Version unchanged at $PACKAGE_VERSION"
-        fi
-    
-    - name: Publish to npm
-      if: steps.version-check.outputs.needs_publish == 'true'
-      run: npm publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
