@@ -8,6 +8,7 @@ on:
 
 jobs:
   test:
+    name: Unit Tests
     runs-on: ubuntu-latest
     
     strategy:
@@ -32,17 +33,55 @@ jobs:
     - name: Test basic functionality
       run: node test-ci.mjs
     
-    - name: Run unit tests (allow failure)
+    - name: Run unit tests
       run: npm test || true
       env:
         CI: true
+
+  prolog:
+    name: Prolog Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build
+      run: npm run build
     
     - name: Run Prolog tests (Trealla)
       run: npm run test:prolog
       env:
         CI: true
+
+  examples:
+    name: Examples Check
+    runs-on: ubuntu-latest
     
-    - name: Build examples (compilation check)
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build
+      run: npm run build
+    
+    - name: Check examples syntax
       run: |
         echo "Checking examples can be imported and run..."
         for file in examples/*.js; do
@@ -51,12 +90,27 @@ jobs:
         done
       env:
         CI: true
+
+  benchmarks:
+    name: Benchmarks Check
+    runs-on: ubuntu-latest
     
-    - name: Verify benchmarks exist
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js 20.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Verify benchmark files
       run: |
         echo "Verifying benchmark files..."
         ls -la benchmarks/*.bench.ts
         echo "Found $(ls benchmarks/*.bench.ts | wc -l) benchmark files"
       env:
         CI: true
-    
