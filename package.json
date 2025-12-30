@@ -24,7 +24,7 @@
     "test:prolog": "node ./tests/prolog/test_runner.js",
     "test:prolog:swipl": "./tests/prolog/run_tests.sh",
     "test:all": "npm run test && npm run test:prolog",
-    "benchmark": "vitest run benchmarks/**/*.test.ts",
+    "benchmark": "vitest bench benchmarks/**/*.bench.ts",
     "clean": "rm -rf dist",
     "prepublishOnly": "npm run clean && npm run build"
   },

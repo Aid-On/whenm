@@ -3,17 +3,14 @@
  * Shows how to use WhenM with LLM for natural language understanding
  */
 
-import { createWhenMEngine } from '@aid-on/whenm';
+import { createGroqEngine } from '../dist/index.js';
 
 async function llmIntegrationExample() {
-  // Create engine with LLM configuration
-  const engine = await createWhenMEngine({
-    llm: {
-      provider: 'groq',
-      model: 'llama-3.3-70b-versatile',
-      // API key should be in environment variable GROQ_API_KEY
-    }
-  });
+  // Create engine with Groq LLM
+  const engine = await createGroqEngine(
+    process.env.GROQ_API_KEY,
+    'llama-3.3-70b-versatile'
+  );
 
   console.log('=== LLM Integration Example ===\n');
   console.log('Using natural language to interact with temporal memory\n');
@@ -35,7 +32,7 @@ async function llmIntegrationExample() {
   // Record events with automatic date extraction
   console.log('Recording natural language events...\n');
   for (const event of naturalEvents) {
-    await engine.record(event);
+    await engine.remember(event);
     console.log(`Recorded: ${event}`);
   }
 
@@ -76,7 +73,7 @@ async function llmIntegrationExample() {
   for (const { question, date } of queries) {
     const result = await engine.ask(question, date);
     console.log(`Q: ${question}`);
-    console.log(`A: ${result.answer}`);
+    console.log(`A: ${result}`);
     if (result.confidence) {
       console.log(`   (Confidence: ${result.confidence})`);
     }
@@ -86,21 +83,13 @@ async function llmIntegrationExample() {
   // Reasoning chain example
   console.log('--- Reasoning Chain Example ---\n');
   
-  const reasoning = await engine.askWithReasoning(
+  const reasoning = await engine.ask(
     "Based on John's career trajectory, what would be a logical next step for him?",
     '2024-01-01'
   );
   
   console.log('Question: What would be a logical next career step?');
-  console.log('Answer:', reasoning.answer);
-  if (reasoning.reasoning) {
-    console.log('\nReasoning steps:');
-    reasoning.reasoning.forEach((step, i) => {
-      console.log(`  ${i + 1}. ${step}`);
-    });
-  }
-
-  await engine.destroy();
+  console.log('Answer:', reasoning);
 }
 
 // Note: Requires GROQ_API_KEY environment variable

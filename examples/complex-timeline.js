@@ -3,10 +3,10 @@
  * Shows how WhenM handles overlapping events and state changes
  */
 
-import { createWhenMEngine } from '@aid-on/whenm';
+import { createUnifiedEngine } from '../dist/index.js';
 
 async function complexTimeline() {
-  const engine = await createWhenMEngine();
+  const engine = await createUnifiedEngine();
 
   console.log('=== Complex Timeline Example ===\n');
 
@@ -42,7 +42,7 @@ async function complexTimeline() {
   // Record all events
   console.log('Recording life events...\n');
   for (const { event, date } of events) {
-    await engine.record(event, date);
+    await engine.remember(event, date);
   }
 
   // Query different time periods
@@ -53,10 +53,10 @@ async function complexTimeline() {
     skills: await engine.ask('What programming languages does Alice know?', '2023-01-15'),
     learning: await engine.ask('Is Alice learning Japanese?', '2023-01-15'),
   };
-  console.log('Job:', jan2023.job.answer);
-  console.log('Location:', jan2023.location.answer);
-  console.log('Skills:', jan2023.skills.answer);
-  console.log('Learning Japanese:', jan2023.learning.answer);
+  console.log('Job:', jan2023.job);
+  console.log('Location:', jan2023.location);
+  console.log('Skills:', jan2023.skills);
+  console.log('Learning Japanese:', jan2023.learning);
 
   console.log('\n--- Status in June 2023 ---');
   const june2023 = {
@@ -65,10 +65,10 @@ async function complexTimeline() {
     possessions: await engine.ask('Does Alice have a car?', '2023-06-15'),
     learning: await engine.ask('Is Alice learning Japanese?', '2023-06-15'),
   };
-  console.log('Role:', june2023.role.answer);
-  console.log('Gym member:', june2023.fitness.answer);
-  console.log('Has car:', june2023.possessions.answer);
-  console.log('Learning Japanese:', june2023.learning.answer);
+  console.log('Role:', june2023.role);
+  console.log('Gym member:', june2023.fitness);
+  console.log('Has car:', june2023.possessions);
+  console.log('Learning Japanese:', june2023.learning);
 
   console.log('\n--- Current Status (May 2024) ---');
   const current = {
@@ -78,11 +78,11 @@ async function complexTimeline() {
     fitness: await engine.ask('Is Alice a member of yoga studio?', '2024-05-15'),
     pets: await engine.ask('Does Alice have any pets?', '2024-05-15'),
   };
-  console.log('Employer:', current.employer.answer);
-  console.log('Location:', current.location.answer);
-  console.log('Knows Japanese:', current.skills.answer);
-  console.log('Yoga member:', current.fitness.answer);
-  console.log('Pets:', current.pets.answer);
+  console.log('Employer:', current.employer);
+  console.log('Location:', current.location);
+  console.log('Knows Japanese:', current.skills);
+  console.log('Yoga member:', current.fitness);
+  console.log('Pets:', current.pets);
 
   // Complex queries
   console.log('\n--- Complex Queries ---');
@@ -91,20 +91,19 @@ async function complexTimeline() {
     'What companies has Alice worked for?',
     '2024-06-01'
   );
-  console.log('Career path:', careerPath.answer);
+  console.log('Career path:', careerPath);
 
   const skillEvolution = await engine.ask(
     'What programming skills did Alice have when she started her first job?',
     '2022-07-01'
   );
-  console.log('Initial skills:', skillEvolution.answer);
+  console.log('Initial skills:', skillEvolution);
 
   // Timeline analysis
   console.log('\n--- Timeline Analysis ---');
-  const allFacts2023 = await engine.getAllFacts('2023-12-31');
-  console.log('End of 2023 state:', allFacts2023);
+  const summary2023 = await engine.ask('What was Alice\'s status at the end of 2023?', '2023-12-31');
+  console.log('End of 2023 state:', summary2023);
 
-  await engine.destroy();
 }
 
 complexTimeline().catch(console.error);
