@@ -49,17 +49,17 @@ const memory = await WhenM.groq({
 // Remember events - any language, any domain
 await memory.remember("Alice joined as engineer", "2020-01-15");
 await memory.remember("Alice became team lead", "2022-06-01");
-await memory.remember("ピカチュウが10万ボルトを覚えた", "2023-01-01");
+await memory.remember("Pikachu learned Thunderbolt", "2023-01-01");
 
 // Ask temporal questions
 await memory.ask("What was Alice's role in 2021?");
 // → "engineer"
 
-await memory.ask("アリスの現在の役職は？");
+await memory.ask("What is Alice's current role?");
 // → "team lead"
 
-await memory.ask("ピカチュウはいつ10万ボルトを覚えた？");
-// → "2023年1月1日"
+await memory.ask("When did Pikachu learn Thunderbolt?");
+// → "January 1, 2023"
 ```
 
 ## Key Features
@@ -75,7 +75,7 @@ await memory.remember("Mario collected a fire flower", "2024-01-01");
 await memory.remember("Added salt to the soup", "2024-02-01");
 
 // Business domain
-await memory.remember("田中さんが部長になった", "2024-03-01");
+await memory.remember("Tanaka became director", "2024-03-01");
 
 // All work without any setup!
 ```
@@ -87,10 +87,10 @@ Built on formal Event Calculus, providing mathematically sound temporal logic fo
 The query refinement layer automatically handles multiple languages and domains.
 
 ```typescript
-// Japanese gaming
-await memory.remember("ピカチュウが10万ボルトを覚えた");
+// Japanese example
+await memory.remember("Pikachu learned Thunderbolt");
 
-// Spanish daily life
+// Spanish example
 await memory.remember("El gato subió al árbol");
 
 // English with emojis
@@ -142,8 +142,8 @@ await memory.remember("Project started", "2024-01-01");
 // Complex state change
 await memory.remember("Bob promoted to manager", "2024-06-01");
 
-// Multilingual
-await memory.remember("実験が成功した", "2024-07-01");
+// Multilingual support
+await memory.remember("Experiment succeeded", "2024-07-01");
 ```
 
 ### Querying
@@ -152,7 +152,7 @@ await memory.remember("実験が成功した", "2024-07-01");
 // Natural language queries
 await memory.ask("What happened in January?");
 await memory.ask("Who became manager this year?");
-await memory.ask("プロジェクトの現在の状態は？");
+await memory.ask("What is the current status of the project?");
 
 // Structured queries
 const events = await memory
@@ -176,7 +176,7 @@ WhenM includes a sophisticated refinement layer that standardizes queries across
 ```typescript
 // These all work seamlessly:
 await memory.ask("What is Alice's role?");
-await memory.ask("アリスの役職は？");
+await memory.ask("What is Alice's role?");
 await memory.ask("¿Cuál es el rol de Alice?");
 ```
 
@@ -287,13 +287,13 @@ Input → Language Normalization → Semantic Decomposition → Temporal Logic �
 
 **Input:**
 ```typescript
-await memory.remember("太郎がマネージャーになった", "2024-03-01");
+await memory.remember("Taro became manager", "2024-03-01");
 ```
 
 **Stage 1: Language Normalization**
 ```json
 {
-  "original": "太郎がマネージャーになった",
+  "original": "Taro became manager",
   "language": "ja",
   "refined": "Taro became manager",
   "entities": ["Taro"]
@@ -352,7 +352,7 @@ if (verb === "learned") domain = "skill";
 WhenM dynamically understands any concept:
 ```typescript
 // ✅ Dynamic understanding
-"ピカチュウが10万ボルトを覚えた" → {domain: "skill", value: "thunderbolt", isExclusive: false}
+"Pikachu learned Thunderbolt" → {domain: "skill", value: "thunderbolt", isExclusive: false}
 "Robot battery at 80%" → {domain: "battery", value: "80", isExclusive: true}
 "Alien transformed into energy" → {domain: "form", value: "energy", isExclusive: true}
 ```
@@ -406,7 +406,7 @@ await medical.remember("Started lisinopril 10mg daily", "2020-03-20");
 await medical.remember("Blood pressure improved to 130/80", "2020-06-15");
 await medical.remember("Developed dry cough side effect", "2020-09-01");
 await medical.remember("Switched to losartan 50mg", "2020-09-05");
-await medical.remember("血圧が正常値に安定", "2021-01-15"); // Multilingual support
+await medical.remember("Blood pressure stabilized to normal", "2021-01-15"); // Multilingual support
 
 // Critical temporal queries for treatment decisions
 const currentMeds = await medical.timeline("Patient").now();
@@ -518,7 +518,7 @@ await game.remember("Player discovered hidden dungeon", "2024-01-01 10:00");
 await game.remember("Player defeated Dragon Boss", "2024-01-01 11:30");
 await game.remember("Player earned 'Dragon Slayer' title", "2024-01-01 11:31");
 await game.remember("Player joined guild 'Knights'", "2024-01-02");
-await game.remember("ギルド戦で勝利した", "2024-01-03"); // Multilingual
+await game.remember("Won guild battle", "2024-01-03"); // Multilingual support
 
 // Personalized gameplay based on history
 const achievements = await game.timeline("Player").states();
