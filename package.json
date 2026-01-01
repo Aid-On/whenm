@@ -1,22 +1,26 @@
 {
   "name": "@aid-on/whenm",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Time-aware memory system that understands when things happened, not just what happened",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     }
   },
+  "sideEffects": false,
   "files": [
     "dist",
     "prolog"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
+    "build:tsc": "tsc",
     "typecheck": "tsc --noEmit",
     "test": "vitest run --exclude 'benchmarks/**' --exclude 'tests/_old/**'",
     "test:watch": "vitest --exclude 'benchmarks/**' --exclude 'tests/_old/**'",
@@ -29,7 +33,7 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
-    "@aid-on/unillm": "^0.3.0",
+    "@aid-on/unillm": "^0.5.1",
     "compromise": "^14.14.5",
     "trealla": "^0.28.8"
   },
@@ -37,6 +41,7 @@
     "@types/node": "^22.10.2",
     "@vitest/coverage-v8": "^2.1.9",
     "dotenv": "^16.6.1",
+    "tsup": "^8.5.1",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },
