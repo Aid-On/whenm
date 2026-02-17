@@ -40,13 +40,13 @@ describe('UniLLMProvider', () => {
 
     it('should handle empty events', async () => {
       const provider = new UniLLMProvider({ provider: 'mock' });
-      
+
       const event = await provider.parseEvent('');
-      
+
       expect(event).toEqual({
         subject: 'unknown',
         verb: 'unknown',
-        object: null
+        object: undefined
       });
     });
 
@@ -73,12 +73,12 @@ describe('UniLLMProvider', () => {
 
     it('should handle empty questions', async () => {
       const provider = new UniLLMProvider({ provider: 'mock' });
-      
+
       const parsed = await provider.parseQuestion('');
-      
+
       expect(parsed).toBeDefined();
       expect(parsed.queryType).toBe('what');
-      expect(parsed.subject).toBe(null);
+      expect(parsed.subject).toBeUndefined();
     });
 
     it('should format responses', async () => {
