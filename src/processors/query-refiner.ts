@@ -14,14 +14,13 @@ export interface RefinedQuery {
   entities?: string[];
   temporal?: string;
   intent?: string;
-  metadata?: any;
+  metadata?: unknown;
 }
 
 export class QueryRefinementLayer {
-  // Simple cache for repeated queries
   private cache = new Map<string, RefinedQuery>();
-  
-  constructor(private llm?: UnifiedLLMProvider) {}
+  private llm?: UnifiedLLMProvider;
+  constructor(llm?: UnifiedLLMProvider) { this.llm = llm; }
   
   /**
    * Refine any query to standardized structure using LLM
@@ -110,8 +109,8 @@ Return ONLY the JSON, no explanation.`;
       this.cache.set(text, refined);
       
       return refined;
-    } catch (error) {
-      console.error('Refinement failed:', error);
+    } catch {
+      // Refinement failed, use fallback
       
       // Fallback: return original with basic structure
       const fallback: RefinedQuery = {

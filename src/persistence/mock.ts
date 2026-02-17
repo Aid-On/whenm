@@ -53,7 +53,7 @@ export class MockPersistencePlugin implements PersistencePlugin {
     }
   }
 
-  private recordCall(method: string, args?: any): void {
+  private recordCall(method: string, args?: unknown): void {
     this.callHistory.push(`${method}:${JSON.stringify(args || {})}`);
   }
 
@@ -87,47 +87,31 @@ export class MockPersistencePlugin implements PersistencePlugin {
     this.recordCall('load', query);
     await this.simulateDelay();
     this.checkFailure();
-    
-    let results = [...this.events];
-    
-    if (query) {
-      // Apply time range filter
-      if (query.timeRange) {
-        const { from, to } = query.timeRange;
-        const fromTime = from ? new Date(from).getTime() : 0;
-        const toTime = to ? new Date(to).getTime() : Date.now();
-        
-        results = results.filter(event => {
-          const eventTime = new Date(event.time).getTime();
-          return eventTime >= fromTime && eventTime <= toTime;
-        });
-      }
-      
-      // Apply pattern filter
-      if (query.pattern) {
-        const pattern = query.pattern;
-        results = results.filter(event => 
-          event.event.includes(pattern)
-        );
-      }
-      
-      // Apply custom filter
-      if (query.filter) {
-        results = results.filter(query.filter);
-      }
-      
-      // Apply offset
-      if (query.offset) {
-        results = results.slice(query.offset);
-      }
-      
-      // Apply limit
-      if (query.limit) {
-        results = results.slice(0, query.limit);
-      }
-    }
-    
+
+    if (!query) return [...this.events];
+
+    let results = this.filterByTimeRange([...this.events], query);
+    results = this.filterByPattern(results, query);
+    if (query.filter) results = results.filter(query.filter);
+    if (query.offset) results = results.slice(query.offset);
+    if (query.limit) results = results.slice(0, query.limit);
     return results;
+  }
+
+  private filterByTimeRange(results: PersistedEvent[], query: PersistenceQuery): PersistedEvent[] {
+    if (!query.timeRange) return results;
+    const { from, to } = query.timeRange;
+    const fromTime = from ? new Date(from).getTime() : 0;
+    const toTime = to ? new Date(to).getTime() : Date.now();
+    return results.filter(event => {
+      const eventTime = new Date(event.time).getTime();
+      return eventTime >= fromTime && eventTime <= toTime;
+    });
+  }
+
+  private filterByPattern(results: PersistedEvent[], query: PersistenceQuery): PersistedEvent[] {
+    if (!query.pattern) return results;
+    return results.filter(event => event.event.includes(query.pattern!));
   }
 
   async delete(query: PersistenceQuery): Promise<number> {

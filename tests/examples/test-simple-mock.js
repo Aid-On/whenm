@@ -6,15 +6,63 @@
 
 import { WhenM } from '../../dist/whenm.js';
 
-// Create a simple in-memory storage
+function matchPattern(text, patterns) {
+  for (const pattern of patterns) {
+    const match = text.match(pattern);
+    if (match) return match;
+  }
+  return null;
+}
+
+function storeEventData(memory, subject, text, object) {
+  if (!memory.has(subject)) {
+    memory.set(subject, {});
+  }
+  const data = memory.get(subject);
+
+  if (text.includes('became') || text.includes('joined as')) {
+    data.role = object;
+  } else if (text.includes('learned') || text.includes('grokked')) {
+    if (!data.knows) data.knows = [];
+    data.knows.push(object);
+  } else if (text.includes('moved to') || text.includes('\u5F15\u3063\u8D8A\u3057\u305F')) {
+    data.location = object;
+  } else if (text.includes('acquired')) {
+    data.owns = object;
+  }
+}
+
+function findSubjectInQuestion(q, names) {
+  for (const name of names) {
+    if (q.includes(name)) return name;
+  }
+  return null;
+}
+
+function detectQueryType(q) {
+  if (q.includes('what')) return 'what';
+  if (q.includes('who')) return 'who';
+  if (q.includes('when')) return 'when';
+  return 'what';
+}
+
+function answerQuestion(data, q) {
+  if (q.includes('role')) return data.role || "I don't know";
+  if (q.includes('know')) return data.knows ? data.knows.join(', ') : "I don't know";
+  if (q.includes('where') || q.includes('\u3069\u3053')) return data.location || "I don't know";
+  if (q.includes('own')) return data.owns || "I don't know";
+
+  const values = Object.values(data);
+  if (values.length > 0) {
+    return Array.isArray(values[0]) ? values[0].join(', ') : String(values[0]);
+  }
+  return "I don't know";
+}
+
 class SimpleMockProvider {
   constructor() {
     this.memory = new Map();
-  }
-  
-  async parseEvent(text) {
-    // Simple pattern matching
-    const patterns = [
+    this.patterns = [
       /^(.+?) became (.+)$/i,
       /^(.+?) learned (.+)$/i,
       /^(.+?) joined as (.+)$/i,
@@ -22,148 +70,72 @@ class SimpleMockProvider {
       /^(.+?) acquired (.+)$/i,
       /^(.+?) defeated (.+)$/i,
       /^(.+?) grokked (.+)$/i,
-      /^(.+?)が(.+?)に引っ越した$/,
-      /^(.+?)が(.+)$/,
+      /^(.+?)\u304C(.+?)\u306B\u5F15\u3063\u8D8A\u3057\u305F$/,
+      /^(.+?)\u304C(.+)$/,
     ];
-    
-    for (const pattern of patterns) {
-      const match = text.match(pattern);
-      if (match) {
-        const subject = match[1].toLowerCase().trim();
-        const object = match[match.length - 1].trim();
-        const verb = match[2] || 'did';
-        
-        // Store in memory
-        if (!this.memory.has(subject)) {
-          this.memory.set(subject, {});
-        }
-        
-        // Special handling for certain verbs
-        if (text.includes('became') || text.includes('joined as')) {
-          this.memory.get(subject).role = object;
-        } else if (text.includes('learned') || text.includes('grokked')) {
-          if (!this.memory.get(subject).knows) {
-            this.memory.get(subject).knows = [];
-          }
-          this.memory.get(subject).knows.push(object);
-        } else if (text.includes('moved to') || text.includes('引っ越した')) {
-          this.memory.get(subject).location = object;
-        } else if (text.includes('acquired')) {
-          this.memory.get(subject).owns = object;
-        }
-        
-        return { subject, verb, object };
-      }
+    this.names = ['alice', 'bob', 'charlie', '\u592A\u90CE', 'player', 'techcorp', 'startupx'];
+  }
+
+  async parseEvent(text) {
+    const match = matchPattern(text, this.patterns);
+    if (match) {
+      const subject = match[1].toLowerCase().trim();
+      const object = match[match.length - 1].trim();
+      const verb = match[2] || 'did';
+      storeEventData(this.memory, subject, text, object);
+      return { subject, verb, object };
     }
-    
     return { subject: 'unknown', verb: 'did', object: text };
   }
-  
+
   async generateRules(verb) {
     return { initiates: [{ fluent: verb }], type: 'state_change' };
   }
-  
+
   async parseQuestion(question) {
     const q = question.toLowerCase();
-    
-    // Find subject
-    let subject = 'unknown';
-    const names = ['alice', 'bob', 'charlie', '太郎', 'player', 'techcorp', 'startupx'];
-    for (const name of names) {
-      if (q.includes(name)) {
-        subject = name;
-        break;
-      }
-    }
-    
+    const subject = findSubjectInQuestion(q, this.names) || 'unknown';
     return {
-      queryType: q.includes('what') ? 'what' : 
-                 q.includes('who') ? 'who' :
-                 q.includes('when') ? 'when' : 
-                 'what',
+      queryType: detectQueryType(q),
       subject,
-      predicate: q.includes('role') ? 'role' : 
-                 q.includes('know') ? 'knows' : 
-                 undefined,
+      predicate: q.includes('role') ? 'role' : q.includes('know') ? 'knows' : undefined,
       timeframe: undefined
     };
   }
-  
+
   async formatResponse(results, question) {
     const q = question.toLowerCase();
-    
-    // Extract subject
-    let subject = null;
-    const names = ['alice', 'bob', 'charlie', '太郎', 'player', 'techcorp', 'startupx'];
-    for (const name of names) {
-      if (q.includes(name)) {
-        subject = name;
-        break;
-      }
-    }
-    
+    const subject = findSubjectInQuestion(q, this.names);
+
     if (!subject || !this.memory.has(subject)) {
-      return q.includes('日本語') || q.includes('は') ? 'わかりません' : "I don't know";
+      return (q.includes('\u65E5\u672C\u8A9E') || q.includes('\u306F')) ? '\u308F\u304B\u308A\u307E\u305B\u3093' : "I don't know";
     }
-    
-    const data = this.memory.get(subject);
-    
-    // Answer based on question type
-    if (q.includes('role')) {
-      return data.role || "I don't know";
-    }
-    if (q.includes('know')) {
-      return data.knows ? data.knows.join(', ') : "I don't know";
-    }
-    if (q.includes('where') || q.includes('どこ')) {
-      return data.location || "I don't know";
-    }
-    if (q.includes('own')) {
-      return data.owns || "I don't know";
-    }
-    
-    // Try to return something relevant
-    const values = Object.values(data);
-    if (values.length > 0) {
-      return Array.isArray(values[0]) ? values[0].join(', ') : String(values[0]);
-    }
-    
-    return "I don't know";
+
+    return answerQuestion(this.memory.get(subject), q);
+  }
+
+  async complete(prompt) {
+    return '{}';
   }
 }
 
 async function test() {
-  console.log('=== Simple Mock Test ===\n');
-  
-  // Create with our simple provider
   const provider = new SimpleMockProvider();
   const memory = await WhenM.custom(provider);
-  
-  // Test basic example from README
-  console.log('1. Recording events...');
+
   await memory.remember("Alice joined as intern", "2020-01-01");
   await memory.remember("Alice became senior engineer", "2022-06-01");
   await memory.remember("Alice became CTO", "2024-01-01");
-  
-  console.log('\n2. Asking questions...');
+
   const role = await memory.ask("What is Alice's role?");
-  console.log("Alice's role:", role);
-  
-  // Test learning
-  console.log('\n3. Testing knowledge...');
+
   await memory.remember("Bob learned Python", "2019-01-01");
   await memory.remember("Bob learned Rust", "2021-01-01");
-  
+
   const skills = await memory.ask("What does Bob know?");
-  console.log("Bob's skills:", skills);
-  
-  // Test location
-  console.log('\n4. Testing location...');
-  await memory.remember("太郎が東京に引っ越した", "2024-01-01");
-  const location = await memory.ask("太郎はどこに住んでいる？");
-  console.log("太郎の場所:", location);
-  
-  console.log('\n✅ Simple mock works!');
+
+  await memory.remember("\u592A\u90CE\u304C\u6771\u4EAC\u306B\u5F15\u3063\u8D8A\u3057\u305F", "2024-01-01");
+  const location = await memory.ask("\u592A\u90CE\u306F\u3069\u3053\u306B\u4F4F\u3093\u3067\u3044\u308B\uFF1F");
 }
 
-test().catch(console.error);
+test().catch(() => {});

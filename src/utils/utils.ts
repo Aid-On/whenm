@@ -19,7 +19,14 @@ export function normalizeDate(date: string | Date | undefined): string {
  * Convert to Unix timestamp
  */
 export function toUnixTime(date: string | Date | undefined): number {
-  const d = date ? (typeof date === 'string' ? new Date(date) : date) : new Date();
+  let d: Date;
+  if (!date) {
+    d = new Date();
+  } else if (typeof date === 'string') {
+    d = new Date(date);
+  } else {
+    d = date;
+  }
   return Math.floor(d.getTime() / 1000);
 }
 

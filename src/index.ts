@@ -1,6 +1,6 @@
 /**
  * @aid-on/whenm - Temporal Memory for AI
- * 
+ *
  * A schemaless, LLM-powered temporal memory system built on Event Calculus
  */
 
@@ -12,30 +12,31 @@ export interface EventMetadata {
   confidence?: number;
   source?: string;
   tags?: string[];
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export interface WhenMEngine {
   remember(event: string, metadata?: EventMetadata): Promise<void>;
-  query(question: string): Promise<any>;
-  getEvents(options?: { limit?: number; since?: Date; until?: Date }): Promise<any[]>;
+  query(question: string): Promise<unknown>;
+  getEvents(options?: { limit?: number; since?: Date; until?: Date }): Promise<unknown[]>;
   reset(): Promise<void>;
-  
+
   // Extended methods for advanced use
   loadFacts?(facts: string): Promise<void>;
   assertEvent?(event: string, date?: string): Promise<void>;
-  allEvents?(): Promise<any[]>;
-  allHolding?(): Promise<any[]>;
+  allEvents?(): Promise<unknown[]>;
+  allHolding?(): Promise<unknown[]>;
 }
 
 export interface WhenMEngineOptions {
   debug?: boolean;
-  persistence?: any;
+  persistence?: unknown;
   useUnixTime?: boolean;
 }
 
 // Main API
-export { WhenM, whenm, default } from "./whenm.js";
+export { WhenM, default } from "./whenm.js";
+export { whenm } from "./whenm-factory.js";
 
 // Removed deprecated query builders and natural language APIs
 
@@ -62,7 +63,7 @@ export class WhenMError extends Error {
   constructor(
     message: string,
     public code: WhenMErrorCode,
-    public details?: any
+    public details?: unknown
   ) {
     super(message);
     this.name = "WhenMError";

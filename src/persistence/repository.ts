@@ -16,17 +16,19 @@ import type {
  * 
  * Provides high-level operations for event persistence
  */
+interface StoreEventParams {
+  subject: string;
+  verb: string;
+  object?: string;
+  timestamp?: Date | string;
+  metadata?: Record<string, unknown>;
+}
+
 export interface EventRepository {
   /**
    * Store a new event
    */
-  storeEvent(
-    subject: string,
-    verb: string,
-    object?: string,
-    timestamp?: Date | string,
-    metadata?: Record<string, any>
-  ): Promise<void>;
+  storeEvent(params: StoreEventParams): Promise<void>;
 
   /**
    * Find events by subject
@@ -73,20 +75,16 @@ export interface EventRepository {
  * Default Event Repository implementation
  */
 export class DefaultEventRepository implements EventRepository {
-  constructor(private plugin: PersistencePlugin) {}
+  private plugin: PersistencePlugin;
+  constructor(plugin: PersistencePlugin) { this.plugin = plugin; }
 
-  async storeEvent(
-    subject: string,
-    verb: string,
-    object?: string,
-    timestamp?: Date | string,
-    metadata?: Record<string, any>
-  ): Promise<void> {
-    const time = timestamp instanceof Date 
-      ? timestamp.toISOString() 
+  async storeEvent(params: StoreEventParams): Promise<void> {
+    const { subject, verb, object, timestamp, metadata } = params;
+    const time = timestamp instanceof Date
+      ? timestamp.toISOString()
       : timestamp || new Date().toISOString();
 
-    const event = object 
+    const event = object
       ? `${verb}(${subject}, ${object})`
       : `${verb}(${subject})`;
 

@@ -33,7 +33,8 @@ export interface NaturalQueryIntent {
  * Parses natural language queries into structured intents
  */
 export class QueryIntentParser {
-  constructor(private llm: UnifiedLLMProvider) {}
+  private llm: UnifiedLLMProvider;
+  constructor(llm: UnifiedLLMProvider) { this.llm = llm; }
 
   /**
    * Parse natural language query using LLM
@@ -93,84 +94,70 @@ Return a JSON object with:
    */
   private parseWithRules(query: string): NaturalQueryIntent {
     const lowerQuery = query.toLowerCase();
-    
-    // Determine action type
-    let action: NaturalQueryIntent['action'] = 'query';
-    if (lowerQuery.includes('when did')) {
-      action = 'when';
-    } else if (lowerQuery.includes('how many') || lowerQuery.includes('count')) {
-      action = 'aggregate';
-    } else if (lowerQuery.includes('timeline') || lowerQuery.includes('history')) {
-      action = 'timeline';
-    } else if (lowerQuery.includes('compare') || lowerQuery.includes('between')) {
-      action = 'compare';
-    } else if (lowerQuery.includes('search') || lowerQuery.includes('find')) {
-      action = 'search';
-    }
-    
-    // Extract entities (simple name extraction)
-    const entities: string[] = [];
-    const namePattern = /\b[A-Z][a-z]+\b/g;
-    const matches = query.match(namePattern);
-    if (matches) {
-      entities.push(...matches.filter(name => 
-        !['What', 'When', 'Where', 'Who', 'Why', 'How'].includes(name)
-      ));
-    }
-    
-    // Extract timeframe
-    let timeframe: NaturalQueryIntent['timeframe'] | undefined;
-    
-    // Relative time patterns
-    const relativePattern = /(?:last|past)\s+(\d+)\s+(hour|day|week|month|year)s?/i;
-    const relativeMatch = lowerQuery.match(relativePattern);
-    if (relativeMatch) {
-      timeframe = {
-        type: 'relative',
-        duration: {
-          amount: parseInt(relativeMatch[1]),
-          unit: relativeMatch[2] + 's'
-        }
-      };
-    }
-    
-    // Date range patterns
-    const rangePattern = /between\s+(\S+)\s+and\s+(\S+)/i;
-    const rangeMatch = lowerQuery.match(rangePattern);
-    if (rangeMatch && !timeframe) {
-      timeframe = {
-        type: 'range',
-        from: rangeMatch[1],
-        to: rangeMatch[2]
-      };
-    }
-    
-    // Specific date patterns
-    const datePatterns = [
-      /(?:on|at)\s+(\d{4}-\d{2}-\d{2})/i,
-      /(?:in|during)\s+(january|february|march|april|may|june|july|august|september|october|november|december)\s+(\d{4})/i
-    ];
-    
-    for (const pattern of datePatterns) {
-      const match = lowerQuery.match(pattern);
-      if (match && !timeframe) {
-        timeframe = {
-          type: 'specific',
-          point: match[1] || `${match[1]} ${match[2]}`
-        };
-        break;
-      }
-    }
-    
-    // No hardcoded verb extraction - let LLM handle semantic understanding
+    const action = this.detectAction(lowerQuery);
+    const entities = this.extractEntities(query);
+    const timeframe = this.extractTimeframe(lowerQuery);
     const keywords = this.extractKeywords(query);
-    
+
     return {
       action,
       entities: entities.length > 0 ? entities : undefined,
       timeframe,
       filters: { keywords }
     };
+  }
+
+  private detectAction(lowerQuery: string): NaturalQueryIntent['action'] {
+    if (lowerQuery.includes('when did')) return 'when';
+    if (lowerQuery.includes('how many') || lowerQuery.includes('count')) return 'aggregate';
+    if (lowerQuery.includes('timeline') || lowerQuery.includes('history')) return 'timeline';
+    if (lowerQuery.includes('compare') || lowerQuery.includes('between')) return 'compare';
+    if (lowerQuery.includes('search') || lowerQuery.includes('find')) return 'search';
+    return 'query';
+  }
+
+  private extractEntities(query: string): string[] {
+    const namePattern = /\b[A-Z][a-z]+\b/g;
+    const questionWords = new Set(['What', 'When', 'Where', 'Who', 'Why', 'How']);
+    const matches = query.match(namePattern);
+    if (!matches) return [];
+    return matches.filter(name => !questionWords.has(name));
+  }
+
+  private extractTimeframe(lowerQuery: string): NaturalQueryIntent['timeframe'] | undefined {
+    const relative = this.extractRelativeTime(lowerQuery);
+    if (relative) return relative;
+
+    const range = this.extractRangeTime(lowerQuery);
+    if (range) return range;
+
+    return this.extractSpecificTime(lowerQuery);
+  }
+
+  private extractRelativeTime(lowerQuery: string): NaturalQueryIntent['timeframe'] | undefined {
+    const match = lowerQuery.match(/(?:last|past)\s+(\d+)\s+(hour|day|week|month|year)s?/i);
+    if (!match) return undefined;
+    return { type: 'relative', duration: { amount: parseInt(match[1]), unit: match[2] + 's' } };
+  }
+
+  private extractRangeTime(lowerQuery: string): NaturalQueryIntent['timeframe'] | undefined {
+    const match = lowerQuery.match(/between\s+(\S+)\s+and\s+(\S+)/i);
+    if (!match) return undefined;
+    return { type: 'range', from: match[1], to: match[2] };
+  }
+
+  private extractSpecificTime(lowerQuery: string): NaturalQueryIntent['timeframe'] | undefined {
+    const patterns = [
+      /(?:on|at)\s+(\d{4}-\d{2}-\d{2})/i,
+      /(?:in|during)\s+(january|february|march|april|may|june|july|august|september|october|november|december)\s+(\d{4})/i
+    ];
+    for (const pattern of patterns) {
+      const match = lowerQuery.match(pattern);
+      if (match) {
+        return { type: 'specific', point: match[1] || `${match[1]} ${match[2]}` };
+      }
+    }
+    return undefined;
   }
 
   /**

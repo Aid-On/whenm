@@ -23,7 +23,8 @@ export interface EventCalculusStructure {
 }
 
 export class EventCalculusProcessor {
-  constructor(private llm: UnifiedLLMProvider) {}
+  private llm: UnifiedLLMProvider;
+  constructor(llm: UnifiedLLMProvider) { this.llm = llm; }
 
   /**
    * Generate Event Calculus structure using LLM semantic judgment

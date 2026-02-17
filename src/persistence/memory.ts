@@ -47,50 +47,47 @@ export class MemoryPersistence implements PersistencePlugin {
   }
   
   async load(query?: PersistenceQuery): Promise<PersistedEvent[]> {
-    let results = [...this.events];
-    
-    if (query) {
-      // Apply time range filter
-      if (query.timeRange) {
-        const from = query.timeRange.from 
-          ? (typeof query.timeRange.from === 'string' 
-              ? query.timeRange.from 
-              : query.timeRange.from.toISOString())
-          : '';
-        const to = query.timeRange.to
-          ? (typeof query.timeRange.to === 'string'
-              ? query.timeRange.to
-              : query.timeRange.to.toISOString())
-          : '9999-12-31';
-        
-        results = results.filter(e => e.time >= from && e.time <= to);
-      }
-      
-      // Apply pattern filter
-      if (query.pattern) {
-        const pattern = query.pattern.toLowerCase();
-        results = results.filter(e => 
-          e.event.toLowerCase().includes(pattern)
-        );
-      }
-      
-      // Apply custom filter
-      if (query.filter) {
-        results = results.filter(query.filter);
-      }
-      
-      // Apply offset
-      if (query.offset) {
-        results = results.slice(query.offset);
-      }
-      
-      // Apply limit
-      if (query.limit) {
-        results = results.slice(0, query.limit);
-      }
+    if (!query) {
+      return [...this.events];
     }
-    
+
+    let results = [...this.events];
+    results = this.applyTimeRangeFilter(results, query);
+    results = this.applyPatternFilter(results, query);
+
+    if (query.filter) {
+      results = results.filter(query.filter);
+    }
+    if (query.offset) {
+      results = results.slice(query.offset);
+    }
+    if (query.limit) {
+      results = results.slice(0, query.limit);
+    }
+
     return results;
+  }
+
+  private applyTimeRangeFilter(results: PersistedEvent[], query: PersistenceQuery): PersistedEvent[] {
+    if (!query.timeRange) return results;
+
+    const from = this.toISOString(query.timeRange.from, '');
+    const to = this.toISOString(query.timeRange.to, '9999-12-31');
+
+    return results.filter(e => e.time >= from && e.time <= to);
+  }
+
+  private applyPatternFilter(results: PersistedEvent[], query: PersistenceQuery): PersistedEvent[] {
+    if (!query.pattern) return results;
+
+    const pattern = query.pattern.toLowerCase();
+    return results.filter(e => e.event.toLowerCase().includes(pattern));
+  }
+
+  private toISOString(value: string | Date | undefined, defaultValue: string): string {
+    if (!value) return defaultValue;
+    if (typeof value === 'string') return value;
+    return value.toISOString();
   }
   
   async delete(query: PersistenceQuery): Promise<number> {

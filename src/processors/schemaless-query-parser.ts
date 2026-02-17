@@ -17,7 +17,8 @@ export interface SchemalessQuery {
 }
 
 export class SchemalessQueryParser {
-  constructor(private llm: UnifiedLLMProvider) {}
+  private llm: UnifiedLLMProvider;
+  constructor(llm: UnifiedLLMProvider) { this.llm = llm; }
 
   /**
    * Parse question to extract domain and temporal scope dynamically
