@@ -1,6 +1,6 @@
 {
   "name": "@aid-on/whenm",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "Time-aware memory system that understands when things happened, not just what happened",
   "type": "module",
   "main": "dist/index.cjs",
@@ -33,7 +33,7 @@
     "prepublishOnly": "npm run clean && npm run build"
   },
   "dependencies": {
-    "@aid-on/unillm": "^0.5.3",
+    "@aid-on/unillm": "^0.5.4",
     "compromise": "^14.14.5",
     "trealla": "^0.28.8"
   },
