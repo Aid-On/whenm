@@ -13,7 +13,7 @@ import {
   type CreateEngineOptions,
   type UniLLMConfig
 } from './core/engine-factory.js';
-import { UniLLMProvider, type UnifiedLLMProvider } from './providers/llm-provider.js';
+import { UniLLMProvider } from './providers/llm-provider.js';
 import type { WhenMEngine } from './index.js';
 
 interface DiffResult {

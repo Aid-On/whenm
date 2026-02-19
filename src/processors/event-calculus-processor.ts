@@ -91,7 +91,7 @@ Return only JSON:`;
         ...structured,
         timestamp
       };
-    } catch (e) {
+    } catch {
       // Fallback
       return {
         subject: 'unknown',

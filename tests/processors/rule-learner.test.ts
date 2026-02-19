@@ -127,7 +127,7 @@ describe('DynamicRuleLearner', () => {
     });
 
     it('should handle invalid contexts', async () => {
-      await expect(learner.learnVerb('test', null as any)).resolves.not.toThrow();
+      await expect(learner.learnVerb('test', null as unknown as string)).resolves.not.toThrow();
     });
   });
 });

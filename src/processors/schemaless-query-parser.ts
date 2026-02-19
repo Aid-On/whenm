@@ -77,7 +77,7 @@ Return JSON only:`;
         ...parsed,
         rawQuestion: question
       };
-    } catch (e) {
+    } catch {
       // Fallback for parse errors
       return {
         temporalScope: 'CURRENT',

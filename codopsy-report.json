@@ -1,0 +1,6200 @@
+{
+  "timestamp": "2026-02-19T21:35:17.799Z",
+  "targetDir": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm",
+  "files": [
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/benchmarks/event-calculus.bench.ts",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 2,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 9,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 10,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 16,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 24,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 31,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 45,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 79,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/benchmarks/groq.bench.ts",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 9,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 13,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createEngine",
+            "line": 14,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 21,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 26,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 33,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 39,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 49,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 60,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 87,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 88,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 95,
+            "complexity": 4,
+            "cognitiveComplexity": 9
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/benchmarks/memory-operations.bench.ts",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 9,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 10,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 16,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 38,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 45,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 60,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 75,
+            "complexity": 4,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 95,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/benchmarks/minimal.bench.ts",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 2,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 8,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 9,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 14,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 24,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 30,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/benchmarks/scale.bench.ts",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 6,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 9,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 10,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 25,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 40,
+            "complexity": 3,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "(anonymous)",
+            "line": 58,
+            "complexity": 7,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "(anonymous)",
+            "line": 92,
+            "complexity": 3,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "(anonymous)",
+            "line": 113,
+            "complexity": 3,
+            "cognitiveComplexity": 4
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/benchmarks/small-test.bench.ts",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 13,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createEngine",
+            "line": 15,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 24,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 29,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 36,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/examples/basic-usage.js",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 4,
+        "functions": [
+          {
+            "name": "basicExample",
+            "line": 12,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/examples/complex-timeline.js",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 4,
+        "functions": [
+          {
+            "name": "complexTimeline",
+            "line": 12,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/examples/llm-integration.js",
+      "complexity": {
+        "cyclomatic": 6,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "llmIntegrationExample",
+            "line": 12,
+            "complexity": 6,
+            "cognitiveComplexity": 7
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/examples/readme-quick-start.js",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 2,
+        "functions": [
+          {
+            "name": "quickStart",
+            "line": 11,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "main",
+            "line": 46,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/examples/readme-quick-start.js",
+          "line": 54,
+          "column": 1,
+          "severity": "info",
+          "rule": "no-floating-promises",
+          "message": "Promise returned by this call must be handled (await, .then/.catch, void, or assignment)"
+        }
+      ],
+      "score": {
+        "score": 99,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/examples/use-cases.js",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 2,
+        "functions": [
+          {
+            "name": "createEngine",
+            "line": 14,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "employeeTracking",
+            "line": 25,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "medicalHistory",
+            "line": 45,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "aiAgentMemory",
+            "line": 66,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "incidentManagement",
+            "line": 86,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "financialAudit",
+            "line": 106,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "gameProgression",
+            "line": 127,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "iotNetwork",
+            "line": 147,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "main",
+            "line": 167,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/examples/use-cases.js",
+          "line": 186,
+          "column": 1,
+          "severity": "info",
+          "rule": "no-floating-promises",
+          "message": "Promise returned by this call must be handled (await, .then/.catch, void, or assignment)"
+        }
+      ],
+      "score": {
+        "score": 99,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/core/engine-factory.ts",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "createMockProlog",
+            "line": 38,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "consult",
+            "line": 40,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "consultText",
+            "line": 41,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "query",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "queryOnce",
+            "line": 43,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createEngineImpl",
+            "line": 50,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "remember",
+            "line": 56,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "assertEvent",
+            "line": 59,
+            "complexity": 5,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "query",
+            "line": 72,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getEvents",
+            "line": 75,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "reset",
+            "line": 78,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "loadFacts",
+            "line": 81,
+            "complexity": 4,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "(anonymous)",
+            "line": 95,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "queryProlog",
+            "line": 102,
+            "complexity": 5,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 119,
+            "complexity": 10,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "parseFactsIntoStore",
+            "line": 131,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 132,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createUnifiedEngine",
+            "line": 148,
+            "complexity": 5,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "createMockEngine",
+            "line": 192,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createGroqEngine",
+            "line": 199,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "createGeminiEngine",
+            "line": 208,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createCloudflareEngine",
+            "line": 217,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/core/unified-engine-persistence.ts",
+      "complexity": {
+        "cyclomatic": 6,
+        "cognitive": 8,
+        "functions": [
+          {
+            "name": "persistEvents",
+            "line": 23,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 32,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "restoreEvents",
+            "line": 44,
+            "complexity": 6,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "getPersistenceStats",
+            "line": 73,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "exportProlog",
+            "line": 90,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "importProlog",
+            "line": 107,
+            "complexity": 3,
+            "cognitiveComplexity": 4
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/core/unified-engine-query.ts",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "filterRelevantResults",
+            "line": 17,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 29,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "executeStructuredQuery",
+            "line": 38,
+            "complexity": 6,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "processQueryResults",
+            "line": 70,
+            "complexity": 7,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "buildCurrentStateQuery",
+            "line": 93,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/core/unified-engine.ts",
+      "complexity": {
+        "cyclomatic": 9,
+        "cognitive": 12,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 46,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "initPersistence",
+            "line": 61,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "initialize",
+            "line": 72,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "remember",
+            "line": 87,
+            "complexity": 8,
+            "cognitiveComplexity": 12
+          },
+          {
+            "name": "refineText",
+            "line": 128,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "ask",
+            "line": 143,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 151,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "tryPrologQuery",
+            "line": 155,
+            "complexity": 9,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "toTimestamp",
+            "line": 186,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "toDateString",
+            "line": 195,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "getEngine",
+            "line": 204,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getLLM",
+            "line": 208,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getLearner",
+            "line": 212,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "nl",
+            "line": 216,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getEvents",
+            "line": 220,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getEventLog",
+            "line": 224,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "allEvents",
+            "line": 228,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "reset",
+            "line": 232,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "persist",
+            "line": 244,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "restore",
+            "line": 248,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 252,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getPersistenceStats",
+            "line": 257,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "exportProlog",
+            "line": 261,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "importProlog",
+            "line": 265,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 269,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 270,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/index.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 66,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/d1.ts",
+      "complexity": {
+        "cyclomatic": 5,
+        "cognitive": 6,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 52,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "initialize",
+            "line": 58,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "save",
+            "line": 66,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "saveBatch",
+            "line": 78,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 79,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "load",
+            "line": 96,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 100,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "buildLoadQuery",
+            "line": 114,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "addTimeRangeClauses",
+            "line": 128,
+            "complexity": 5,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "addPatternClause",
+            "line": 141,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "addPaginationClauses",
+            "line": 148,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "delete",
+            "line": 158,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 165,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 165,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 166,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clear",
+            "line": 177,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "stats",
+            "line": 181,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "exportProlog",
+            "line": 202,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 205,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "importProlog",
+            "line": 209,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "destroy",
+            "line": 225,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createD1Persistence",
+            "line": 233,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 237,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/index.ts",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 6,
+        "functions": [
+          {
+            "name": "createPersistence",
+            "line": 18,
+            "complexity": 8,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "withPersistence",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "schedulePersist",
+            "line": 53,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 55,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "wrappedRemember",
+            "line": 64,
+            "complexity": 3,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "persist",
+            "line": 86,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "restore",
+            "line": 93,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "persistenceStats",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/memory.ts",
+      "complexity": {
+        "cyclomatic": 5,
+        "cognitive": 4,
+        "functions": [
+          {
+            "name": "save",
+            "line": 20,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 28,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 40,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "saveBatch",
+            "line": 43,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "load",
+            "line": 49,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "applyTimeRangeFilter",
+            "line": 71,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 77,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "applyPatternFilter",
+            "line": 80,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "toISOString",
+            "line": 87,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "delete",
+            "line": 93,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 95,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 98,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clear",
+            "line": 103,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "stats",
+            "line": 108,
+            "complexity": 1,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "exportProlog",
+            "line": 120,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 123,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "importProlog",
+            "line": 127,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "createMemoryPersistence",
+            "line": 143,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/mock.ts",
+      "complexity": {
+        "cyclomatic": 5,
+        "cognitive": 4,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 32,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "simulateDelay",
+            "line": 44,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 46,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "checkFailure",
+            "line": 50,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "recordCall",
+            "line": 56,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "save",
+            "line": 60,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "saveBatch",
+            "line": 73,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "load",
+            "line": 86,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "filterByTimeRange",
+            "line": 101,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 106,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "filterByPattern",
+            "line": 112,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 115,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "delete",
+            "line": 118,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 124,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 127,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clear",
+            "line": 132,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "stats",
+            "line": 140,
+            "complexity": 1,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 145,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "exportProlog",
+            "line": 161,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 168,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "importProlog",
+            "line": 172,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 178,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getEvents",
+            "line": 196,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getCallHistory",
+            "line": 203,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clearCallHistory",
+            "line": 210,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "setFailure",
+            "line": 217,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "setDelay",
+            "line": 227,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createMockPersistencePlugin",
+            "line": 235,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/prolog-native.ts",
+      "complexity": {
+        "cyclomatic": 6,
+        "cognitive": 8,
+        "functions": [
+          {
+            "name": "save",
+            "line": 27,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 31,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "enhanceEvent",
+            "line": 42,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "updateIndices",
+            "line": 56,
+            "complexity": 5,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "addToIndex",
+            "line": 68,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "saveBatch",
+            "line": 77,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "load",
+            "line": 83,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "applyTimeFilter",
+            "line": 105,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 109,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "applyPatternFilter",
+            "line": 116,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 128,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "delete",
+            "line": 133,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 138,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "rebuildIndices",
+            "line": 145,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "clear",
+            "line": 155,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "stats",
+            "line": 162,
+            "complexity": 6,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "exportProlog",
+            "line": 186,
+            "complexity": 6,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "importProlog",
+            "line": 212,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 213,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "queryProlog",
+            "line": 229,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 238,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createPrologNativePersistence",
+            "line": 247,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/prolog-term-parser.ts",
+      "complexity": {
+        "cyclomatic": 9,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "parsePrologTerm",
+            "line": 18,
+            "complexity": 9,
+            "cognitiveComplexity": 11
+          },
+          {
+            "name": "parseSingleArg",
+            "line": 57,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "termToString",
+            "line": 76,
+            "complexity": 6,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "(anonymous)",
+            "line": 86,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/repository.ts",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 78,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "storeEvent",
+            "line": 80,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "findBySubject",
+            "line": 102,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "filter",
+            "line": 106,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "findByVerb",
+            "line": 113,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "filter",
+            "line": 117,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "findByTimeRange",
+            "line": 124,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "findRecent",
+            "line": 133,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getAllEvents",
+            "line": 141,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clearAll",
+            "line": 145,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getStats",
+            "line": 149,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getPlugin",
+            "line": 153,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "createEventRepository",
+            "line": 161,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/persistence/types.ts",
+      "complexity": {
+        "cyclomatic": 0,
+        "cognitive": 0,
+        "functions": []
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/processors/event-calculus-processor.ts",
+      "complexity": {
+        "cyclomatic": 9,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 27,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "structureForEventCalculus",
+            "line": 32,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "generatePrologFacts",
+            "line": 108,
+            "complexity": 9,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "generateStateQuery",
+            "line": 152,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "generateSnapshotQuery",
+            "line": 160,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/processors/nlp-parser.ts",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 10,
+        "functions": [
+          {
+            "name": "parse",
+            "line": 20,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "buildDoc",
+            "line": 31,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "findSubject",
+            "line": 47,
+            "complexity": 7,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 61,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "findVerb",
+            "line": 76,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "findObject",
+            "line": 103,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "extractKeywords",
+            "line": 124,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 132,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 140,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 141,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 144,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 151,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "detectQuestionType",
+            "line": 157,
+            "complexity": 10,
+            "cognitiveComplexity": 10
+          },
+          {
+            "name": "(anonymous)",
+            "line": 179,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "extractQuestionSubject",
+            "line": 187,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "extractSubjectFromPosition",
+            "line": 202,
+            "complexity": 10,
+            "cognitiveComplexity": 10
+          },
+          {
+            "name": "calculateEventMatch",
+            "line": 232,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "(anonymous)",
+            "line": 238,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 244,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/processors/query-intent-parser.ts",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 9,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 37,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "parseIntent",
+            "line": 42,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "parseWithLLM",
+            "line": 55,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "parseWithRules",
+            "line": 95,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "detectAction",
+            "line": 110,
+            "complexity": 10,
+            "cognitiveComplexity": 9
+          },
+          {
+            "name": "extractEntities",
+            "line": 119,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 124,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "extractTimeframe",
+            "line": 127,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "extractRelativeTime",
+            "line": 137,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "extractRangeTime",
+            "line": 143,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "extractSpecificTime",
+            "line": 149,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "extractKeywords",
+            "line": 166,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 183,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 184,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/processors/query-refiner.ts",
+      "complexity": {
+        "cyclomatic": 6,
+        "cognitive": 6,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 23,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "refine",
+            "line": 29,
+            "complexity": 6,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "detectBasicLanguage",
+            "line": 132,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "clearCache",
+            "line": 152,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getCacheSize",
+            "line": 159,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/processors/rule-learner.ts",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 25,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "learnVerb",
+            "line": 33,
+            "complexity": 10,
+            "cognitiveComplexity": 11
+          },
+          {
+            "name": "getLearnedRules",
+            "line": 75,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "exportRules",
+            "line": 82,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "importRules",
+            "line": 93,
+            "complexity": 5,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "getRuleForVerb",
+            "line": 112,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getCachedPrologRule",
+            "line": 119,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clearRules",
+            "line": 126,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/processors/schemaless-query-parser.ts",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 2,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 21,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "parseQueryDynamic",
+            "line": 26,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "formatFactAsResponse",
+            "line": 92,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/providers/llm-provider.ts",
+      "complexity": {
+        "cyclomatic": 9,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 66,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "getModel",
+            "line": 79,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "generate",
+            "line": 83,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "complete",
+            "line": 90,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "buildCredentials",
+            "line": 108,
+            "complexity": 9,
+            "cognitiveComplexity": 11
+          },
+          {
+            "name": "getDefaultModel",
+            "line": 128,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "parseEvent",
+            "line": 138,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "buildParseEventPrompt",
+            "line": 158,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "generateRules",
+            "line": 171,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "parseQuestion",
+            "line": 193,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "buildParseQuestionPrompt",
+            "line": 213,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "formatResponse",
+            "line": 231,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/providers/mock-llm-provider.ts",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 6,
+        "functions": [
+          {
+            "name": "mockComplete",
+            "line": 32,
+            "complexity": 5,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "mockParseEvent",
+            "line": 51,
+            "complexity": 4,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "mockGenerateRules",
+            "line": 66,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "mockParseQuestion",
+            "line": 76,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "extractPredicateAndObject",
+            "line": 90,
+            "complexity": 7,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "mockFormatResponse",
+            "line": 115,
+            "complexity": 6,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "formatFirstEvent",
+            "line": 128,
+            "complexity": 8,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "fallbackParseQuestion",
+            "line": 153,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "detectQueryType",
+            "line": 159,
+            "complexity": 5,
+            "cognitiveComplexity": 6
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/utils/utils.ts",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "normalizeDate",
+            "line": 8,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "toUnixTime",
+            "line": 21,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "parseDuration",
+            "line": 36,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/whenm-factory.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "cloudflare",
+            "line": 18,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "groq",
+            "line": 30,
+            "complexity": 1,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "gemini",
+            "line": 38,
+            "complexity": 1,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "auto",
+            "line": 46,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/whenm.ts",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "constructor",
+            "line": 37,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "create",
+            "line": 39,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "auto",
+            "line": 54,
+            "complexity": 8,
+            "cognitiveComplexity": 11
+          },
+          {
+            "name": "mock",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "cloudflare",
+            "line": 89,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "groq",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "gemini",
+            "line": 105,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "custom",
+            "line": 110,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "remember",
+            "line": 118,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "ask",
+            "line": 123,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "entity",
+            "line": 130,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "recent",
+            "line": 134,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "search",
+            "line": 138,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "getEvents",
+            "line": 142,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "reset",
+            "line": 150,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "export",
+            "line": 158,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "import",
+            "line": 162,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "getEngine",
+            "line": 170,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "exportKnowledge",
+            "line": 174,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "batch",
+            "line": 178,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "diff",
+            "line": 185,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "askMany",
+            "line": 194,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 195,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "debug",
+            "line": 198,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "persist",
+            "line": 205,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "restore",
+            "line": 211,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "persistenceStats",
+            "line": 217,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/_old/entity-api.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 10,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 15,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 21,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 22,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 29,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 37,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 49,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 57,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 58,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 70,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 75,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 85,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 97,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 108,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 122,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 141,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 154,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 155,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 168,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 183,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 184,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 201,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/_old/index.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 4,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 7,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 13,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 14,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 34,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 43,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 61,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 62,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 74,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 87,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 88,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 112,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 113,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 126,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 127,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 140,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 146,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 147,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 161,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 162,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 172,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 182,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 191,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/_old/prolog.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 7,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 9,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 10,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 11,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 17,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 21,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 25,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 26,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 34,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 35,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 43,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 44,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 50,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 57,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 58,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 63,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 68,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 69,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 74,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 75,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 78,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 83,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 88,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 89,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 94,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 95,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 101,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 102,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 114,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 115,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 120,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 130,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 131,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 142,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 152,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 153,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 158,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 159,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 162,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 166,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 167,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 175,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 176,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 183,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 191,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 192,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 202,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 203,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 213,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 214,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 219,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 220,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 226,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 227,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 234,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 244,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 245,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 246,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 255,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 256,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 264,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 275,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 276,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 284,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/_old/query-performance.test.ts",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "getRoleForIndex",
+            "line": 10,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 16,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 20,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 25,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 26,
+            "complexity": 3,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 48,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 66,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 81,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/_old/unified-api.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 4,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 7,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 14,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 15,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 34,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 47,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 55,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 65,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 72,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 80,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 85,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 90,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 97,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 108,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 114,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 115,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 123,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 134,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 141,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 142,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 164,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 165,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 171,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 177,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-compound-debug.js",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "debugCompound",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-compound-who.js",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 9,
+        "functions": [
+          {
+            "name": "testCompoundWho",
+            "line": 9,
+            "complexity": 8,
+            "cognitiveComplexity": 9
+          },
+          {
+            "name": "(anonymous)",
+            "line": 42,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-debug-nl.js",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "testNLQuery",
+            "line": 11,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-debug-nlquery.js",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "debugNL",
+            "line": 13,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-debug-python.js",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "debugPython",
+            "line": 9,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-debug-who.js",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 5,
+        "functions": [
+          {
+            "name": "debugWho",
+            "line": 10,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 39,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 44,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 51,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 59,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 71,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 3,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "(anonymous)",
+            "line": 99,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-debug.js",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "test",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-debug2.js",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "test",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-joined-as-debug.js",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 9,
+        "functions": [
+          {
+            "name": "debugJoinedAs",
+            "line": 9,
+            "complexity": 10,
+            "cognitiveComplexity": 9
+          },
+          {
+            "name": "(anonymous)",
+            "line": 30,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 61,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-joined-fix.js",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "testJoinedFix",
+            "line": 9,
+            "complexity": 8,
+            "cognitiveComplexity": 11
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-who-logic.js",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "testWhoLogic",
+            "line": 9,
+            "complexity": 8,
+            "cognitiveComplexity": 11
+          },
+          {
+            "name": "(anonymous)",
+            "line": 69,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/debug/test-who-logic.js",
+          "line": 59,
+          "column": 7,
+          "severity": "info",
+          "rule": "prefer-const",
+          "message": "'total' is declared with let; consider using const if not reassigned"
+        }
+      ],
+      "score": {
+        "score": 99,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/engine-factory.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 11,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 12,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 13,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 21,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 22,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 29,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 34,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 44,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 45,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 54,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 73,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 81,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 93,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 94,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 99,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 104,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-modern-api.js",
+      "complexity": {
+        "cyclomatic": 3,
+        "cognitive": 5,
+        "functions": [
+          {
+            "name": "testModernAPI",
+            "line": 9,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "parseEvent",
+            "line": 14,
+            "complexity": 3,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "generateRules",
+            "line": 37,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "parseQuestion",
+            "line": 55,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "formatResponse",
+            "line": 63,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "complete",
+            "line": 67,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-prolog.js",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "test",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-readme-examples.js",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "testBasicExample",
+            "line": 9,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testCareerProgression",
+            "line": 33,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testRelationshipChanges",
+            "line": 48,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testMultiLanguage",
+            "line": 63,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testChainableAPI",
+            "line": 87,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 95,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testBatchOperations",
+            "line": 103,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testRAGComparison",
+            "line": 123,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testEntityProxy",
+            "line": 146,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testParallelQuestions",
+            "line": 167,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "main",
+            "line": 188,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-readme-examples.js",
+          "line": 215,
+          "column": 1,
+          "severity": "info",
+          "rule": "no-floating-promises",
+          "message": "Promise returned by this call must be handled (await, .then/.catch, void, or assignment)"
+        }
+      ],
+      "score": {
+        "score": 99,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-readme-scenario.js",
+      "complexity": {
+        "cyclomatic": 5,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "checkRequiredEnvVars",
+            "line": 9,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 11,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "checkMatch",
+            "line": 18,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testREADMEScenario",
+            "line": 27,
+            "complexity": 5,
+            "cognitiveComplexity": 3
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-simple-mock.js",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 10,
+        "functions": [
+          {
+            "name": "matchPattern",
+            "line": 9,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "storeEventData",
+            "line": 17,
+            "complexity": 10,
+            "cognitiveComplexity": 10
+          },
+          {
+            "name": "findSubjectInQuestion",
+            "line": 35,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "answerRoleQuestion",
+            "line": 42,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "answerKnowledgeQuestion",
+            "line": 46,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "answerLocationQuestion",
+            "line": 50,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "answerOwnershipQuestion",
+            "line": 54,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "answerQuestion",
+            "line": 58,
+            "complexity": 8,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "constructor",
+            "line": 72,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "parseEvent",
+            "line": 88,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "generateRules",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "parseQuestion",
+            "line": 104,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "formatResponse",
+            "line": 108,
+            "complexity": 5,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "complete",
+            "line": 119,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "test",
+            "line": 124,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-success.js",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "testSuccess",
+            "line": 11,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/examples/test-validation-scenarios.js",
+      "complexity": {
+        "cyclomatic": 6,
+        "cognitive": 5,
+        "functions": [
+          {
+            "name": "section",
+            "line": 12,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "classifyAction",
+            "line": 18,
+            "complexity": 6,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "createScenarioLLM",
+            "line": 25,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "parseEvent",
+            "line": 57,
+            "complexity": 3,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "generateRules",
+            "line": 67,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "parseQuestion",
+            "line": 68,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "formatResponse",
+            "line": 69,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "complete",
+            "line": 70,
+            "complexity": 3,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "runScenario",
+            "line": 80,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "main",
+            "line": 89,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 104,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 113,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 121,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 123,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 130,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 137,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 139,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 141,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 146,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 153,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 155,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 160,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 167,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 171,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/integration/basic.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 4,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 6,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 20,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 34,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 46,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 47,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 56,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 70,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 71,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 90,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 110,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 111,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 145,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 146,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 167,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/llm-provider.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 4,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 6,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 17,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 29,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 41,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 53,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 64,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 74,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 106,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 107,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 115,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 121,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 129,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 130,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 140,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 152,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 161,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-advanced.js",
+      "complexity": {
+        "cyclomatic": 10,
+        "cognitive": 10,
+        "functions": [
+          {
+            "name": "loadDialogue",
+            "line": 126,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 135,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "evaluateCategory",
+            "line": 143,
+            "complexity": 8,
+            "cognitiveComplexity": 10
+          },
+          {
+            "name": "(anonymous)",
+            "line": 150,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "runAdvancedBenchmark",
+            "line": 176,
+            "complexity": 10,
+            "cognitiveComplexity": 9
+          },
+          {
+            "name": "(anonymous)",
+            "line": 295,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-extensive.js",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 11,
+        "functions": [
+          {
+            "name": "loadEvents",
+            "line": 61,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 66,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "evaluateResult",
+            "line": 71,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "(anonymous)",
+            "line": 73,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "runQueries",
+            "line": 81,
+            "complexity": 7,
+            "cognitiveComplexity": 11
+          },
+          {
+            "name": "(anonymous)",
+            "line": 94,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testLoCoMoExtensive",
+            "line": 102,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-final.js",
+      "complexity": {
+        "cyclomatic": 8,
+        "cognitive": 12,
+        "functions": [
+          {
+            "name": "testLoCoMo",
+            "line": 11,
+            "complexity": 8,
+            "cognitiveComplexity": 12
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-final.js",
+          "line": 66,
+          "column": 7,
+          "severity": "info",
+          "rule": "prefer-const",
+          "message": "'total' is declared with let; consider using const if not reassigned"
+        }
+      ],
+      "score": {
+        "score": 99,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-integration.js",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 10,
+        "functions": [
+          {
+            "name": "parseConversation",
+            "line": 89,
+            "complexity": 5,
+            "cognitiveComplexity": 10
+          },
+          {
+            "name": "evaluateCategory",
+            "line": 107,
+            "complexity": 4,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "evaluateQuestions",
+            "line": 121,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 128,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 131,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 134,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "checkIncludes",
+            "line": 137,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "orderingCheck",
+            "line": 141,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "extractEntities",
+            "line": 153,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "classifyQuery",
+            "line": 160,
+            "complexity": 7,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "buildJsonResponse",
+            "line": 167,
+            "complexity": 7,
+            "cognitiveComplexity": 8
+          },
+          {
+            "name": "main",
+            "line": 184,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "parseEvent",
+            "line": 191,
+            "complexity": 3,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "generateRules",
+            "line": 205,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "parseQuestion",
+            "line": 216,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "formatResponse",
+            "line": 217,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "complete",
+            "line": 218,
+            "complexity": 2,
+            "cognitiveComplexity": 2
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-integration.js",
+          "line": 125,
+          "column": 29,
+          "severity": "info",
+          "rule": "no-misused-promises",
+          "message": "Async function passed to map() which expects a synchronous callback"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-integration.js",
+          "line": 128,
+          "column": 28,
+          "severity": "info",
+          "rule": "no-misused-promises",
+          "message": "Async function passed to map() which expects a synchronous callback"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-integration.js",
+          "line": 131,
+          "column": 28,
+          "severity": "info",
+          "rule": "no-misused-promises",
+          "message": "Async function passed to map() which expects a synchronous callback"
+        },
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-integration.js",
+          "line": 134,
+          "column": 28,
+          "severity": "info",
+          "rule": "no-misused-promises",
+          "message": "Async function passed to map() which expects a synchronous callback"
+        }
+      ],
+      "score": {
+        "score": 98,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-load.js",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 4,
+        "functions": [
+          {
+            "name": "loadData",
+            "line": 10,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "(anonymous)",
+            "line": 83,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-massive.js",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "loadEvents",
+            "line": 148,
+            "complexity": 3,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 156,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "evaluateResult",
+            "line": 163,
+            "complexity": 7,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 172,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "runQueries",
+            "line": 181,
+            "complexity": 5,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 196,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "printSummary",
+            "line": 206,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "testLoCoMoMassive",
+            "line": 225,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-query.js",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "evaluateResult",
+            "line": 24,
+            "complexity": 7,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 33,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "checkDataLoaded",
+            "line": 42,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "runQueries",
+            "line": 53,
+            "complexity": 5,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 67,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "testQueries",
+            "line": 77,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-reset.js",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "reset",
+            "line": 9,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          }
+        ]
+      },
+      "issues": [
+        {
+          "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-reset.js",
+          "line": 21,
+          "column": 1,
+          "severity": "info",
+          "rule": "no-floating-promises",
+          "message": "Promise returned by this call must be handled (await, .then/.catch, void, or assignment)"
+        }
+      ],
+      "score": {
+        "score": 99,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/locomo/test-locomo-simple.js",
+      "complexity": {
+        "cyclomatic": 7,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "runSimpleTest",
+            "line": 11,
+            "complexity": 7,
+            "cognitiveComplexity": 7
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/persistence/prolog-native.test.ts",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 3,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 4,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 7,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 11,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 12,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 22,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 23,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 30,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 39,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 47,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 56,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 57,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 68,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 73,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 89,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 100,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 113,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 114,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 122,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 127,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 128,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 135,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 148,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 149,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 156,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 167,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 173,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 185,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 186,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 202,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 203,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 212,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 213,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 228,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/processors/rule-learner.test.ts",
+      "complexity": {
+        "cyclomatic": 2,
+        "cognitive": 1,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 6,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 11,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 24,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 25,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 33,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 43,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 55,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 56,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 62,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 72,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 81,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 82,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 89,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 96,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 104,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 105,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 115,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 124,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 125,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 129,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/prolog/event-calculus.test.ts",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 7,
+        "functions": [
+          {
+            "name": "collectAnswers",
+            "line": 10,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "(anonymous)",
+            "line": 18,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 21,
+            "complexity": 4,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 45,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 46,
+            "complexity": 3,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "(anonymous)",
+            "line": 65,
+            "complexity": 4,
+            "cognitiveComplexity": 7
+          },
+          {
+            "name": "(anonymous)",
+            "line": 80,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 93,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 94,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 117,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 139,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 140,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 154,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 173,
+            "complexity": 3,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "(anonymous)",
+            "line": 188,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 191,
+            "complexity": 4,
+            "cognitiveComplexity": 5
+          },
+          {
+            "name": "(anonymous)",
+            "line": 201,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 202,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 217,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 218,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          },
+          {
+            "name": "(anonymous)",
+            "line": 243,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 244,
+            "complexity": 3,
+            "cognitiveComplexity": 6
+          },
+          {
+            "name": "(anonymous)",
+            "line": 258,
+            "complexity": 2,
+            "cognitiveComplexity": 3
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/prolog/test_runner.js",
+      "complexity": {
+        "cyclomatic": 6,
+        "cognitive": 4,
+        "functions": [
+          {
+            "name": "assertFact",
+            "line": 22,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "clearFacts",
+            "line": 26,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "runTest",
+            "line": 30,
+            "complexity": 3,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "testBasicHoldsAt",
+            "line": 43,
+            "complexity": 1,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testTermination",
+            "line": 51,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testPatternMatching",
+            "line": 59,
+            "complexity": 1,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testSingularFluent",
+            "line": 65,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testPossession",
+            "line": 73,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testLocation",
+            "line": 82,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testLearning",
+            "line": 90,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testComplexTimeline",
+            "line": 98,
+            "complexity": 6,
+            "cognitiveComplexity": 2
+          },
+          {
+            "name": "testAllHolding",
+            "line": 121,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "testEdgeCase",
+            "line": 129,
+            "complexity": 2,
+            "cognitiveComplexity": 1
+          },
+          {
+            "name": "runTests",
+            "line": 137,
+            "complexity": 4,
+            "cognitiveComplexity": 4
+          },
+          {
+            "name": "(anonymous)",
+            "line": 146,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 147,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 148,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 149,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 150,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 151,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 152,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 153,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 154,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 155,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 166,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 171,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/unified-engine.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 6,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 10,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 25,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 26,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 33,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 42,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 50,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 59,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 69,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 70,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 77,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 84,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 92,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 101,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 102,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 110,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 120,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 121,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 130,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 139,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tests/whenm.test.ts",
+      "complexity": {
+        "cyclomatic": 1,
+        "cognitive": 0,
+        "functions": [
+          {
+            "name": "(anonymous)",
+            "line": 4,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 5,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 6,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 13,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 20,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 26,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 27,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 35,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 44,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 49,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 55,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 56,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 65,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 74,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 87,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 88,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 98,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 99,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          },
+          {
+            "name": "(anonymous)",
+            "line": 108,
+            "complexity": 1,
+            "cognitiveComplexity": 0
+          }
+        ]
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/tsup.config.ts",
+      "complexity": {
+        "cyclomatic": 0,
+        "cognitive": 0,
+        "functions": []
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    },
+    {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/vitest.config.ts",
+      "complexity": {
+        "cyclomatic": 0,
+        "cognitive": 0,
+        "functions": []
+      },
+      "issues": [],
+      "score": {
+        "score": 100,
+        "grade": "A"
+      }
+    }
+  ],
+  "summary": {
+    "totalFiles": 78,
+    "totalIssues": 10,
+    "issuesBySeverity": {
+      "error": 0,
+      "warning": 0,
+      "info": 10
+    },
+    "averageComplexity": 1.8449519230769231,
+    "maxComplexity": {
+      "file": "/Users/o6lvl4/workspace/github.com/Aid-On/aid-on-platform/packages/whenm/src/core/engine-factory.ts",
+      "function": "(anonymous)",
+      "complexity": 10
+    }
+  },
+  "score": {
+    "overall": 97,
+    "grade": "A",
+    "distribution": {
+      "A": 78,
+      "B": 0,
+      "C": 0,
+      "D": 0,
+      "F": 0
+    }
+  }
+}

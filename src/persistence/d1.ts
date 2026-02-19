@@ -209,9 +209,8 @@ export class D1Persistence implements PersistencePlugin {
   async importProlog(facts: string): Promise<void> {
     const events: PersistedEvent[] = [];
     const factRegex = /happens\(([^)]+)\),\s*"([^"]+)"\)/g;
-    let match;
 
-    while ((match = factRegex.exec(facts)) !== null) {
+    for (const match of facts.matchAll(factRegex)) {
       events.push({
         event: match[1],
         time: match[2]

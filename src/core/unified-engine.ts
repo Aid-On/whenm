@@ -140,7 +140,7 @@ export class UnifiedSchemalessEngine {
   /**
    * Ask questions in natural language
    */
-  async ask(question: string, date?: string | Date): Promise<string> {
+  async ask(question: string, _date?: string | Date): Promise<string> {
     const parsed = await this.queryParser.parseQueryDynamic(question);
 
     const prologResult = await this.tryPrologQuery(parsed, question);

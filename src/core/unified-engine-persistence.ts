@@ -23,7 +23,7 @@ export interface EventLogEntry {
 export async function persistEvents(
   persistence: PersistencePlugin | undefined,
   eventLog: EventLogEntry[],
-  options: PersistenceOptions
+  _options: PersistenceOptions
 ): Promise<void> {
   if (!persistence) {
     return;
@@ -45,7 +45,7 @@ export async function restoreEvents(
   persistence: PersistencePlugin | undefined,
   query: unknown,
   rememberFn: (text: string, date?: string | Date) => Promise<void>,
-  options: PersistenceOptions
+  _options: PersistenceOptions
 ): Promise<void> {
   if (!persistence) {
     return;
@@ -115,9 +115,8 @@ export async function importProlog(
     await restoreFn();
   } else {
     const factRegex = /happens\(([^)]+)\),\s*"([^"]+)"\)/g;
-    let match;
 
-    while ((match = factRegex.exec(facts)) !== null) {
+    for (const match of facts.matchAll(factRegex)) {
       await rememberFn(match[1], match[2]);
     }
   }

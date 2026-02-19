@@ -50,7 +50,7 @@ function createMockProlog(): Record<string, (...args: unknown[]) => unknown> {
 function createEngineImpl(
   prolog: Record<string, (...args: unknown[]) => unknown>,
   eventStore: EventStoreEntry[],
-  debug?: boolean
+  _debug?: boolean
 ): WhenMEngine {
   const engine: WhenMEngine = {
     async remember(event: string, metadata?: EventMetadata): Promise<void> {

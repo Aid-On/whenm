@@ -38,7 +38,7 @@ Return only the indices of relevant events as JSON array (e.g., [0, 2]):`;
 export async function executeStructuredQuery(
   query: { subject?: string; targetDomain?: string },
   engine: WhenMEngine,
-  options: QueryOptions
+  _options: QueryOptions
 ): Promise<unknown[]> {
   if (!engine.query) {
     return [];

@@ -33,17 +33,17 @@ describe('Groq LLM Performance', () => {
   bench('Simple query', async () => {
     const engine = await createEngine();
     await engine.remember('user learned python', '2024-01-01');
-    const result = await engine.ask('Does user know python?', '2024-06-01');
+    await engine.ask('Does user know python?', '2024-06-01');
   }, { iterations: 2, timeout: 30000 });
 
   bench('Complex state query', async () => {
     const engine = await createEngine();
-    
+
     await engine.remember('user learned Python', '2024-01-01');
     await engine.remember('user joined company as developer', '2024-02-01');
     await engine.remember('user moved to Tokyo', '2024-03-01');
-    
-    const result = await engine.ask('What is user\'s role and where do they live?', '2024-07-01');
+
+    await engine.ask('What is user\'s role and where do they live?', '2024-07-01');
   }, { iterations: 1, timeout: 60000 });
 
   bench('Historical query', async () => {

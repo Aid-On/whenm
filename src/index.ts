@@ -60,13 +60,18 @@ export { normalizeDate, toUnixTime, parseDuration } from "./utils/utils.js";
 
 // Error handling
 export class WhenMError extends Error {
+  public readonly code: WhenMErrorCode;
+  public readonly details?: unknown;
+
   constructor(
     message: string,
-    public code: WhenMErrorCode,
-    public details?: unknown
+    code: WhenMErrorCode,
+    details?: unknown
   ) {
     super(message);
     this.name = "WhenMError";
+    this.code = code;
+    this.details = details;
   }
 }
 

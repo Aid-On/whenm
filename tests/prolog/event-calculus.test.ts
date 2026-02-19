@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { Prolog } from 'trealla';
 import type { Answer } from 'trealla';
 import { readFileSync } from 'fs';
@@ -36,7 +36,7 @@ describe('Event Calculus Prolog', () => {
       } catch {
         // EC rules file not found or no embedded Prolog code, that's fine
       }
-    } catch (error) {
+    } catch {
       // If Prolog initialization fails, skip tests
       prolog = null;
     }

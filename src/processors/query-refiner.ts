@@ -28,8 +28,9 @@ export class QueryRefinementLayer {
    */
   async refine(text: string): Promise<RefinedQuery> {
     // Check cache
-    if (this.cache.has(text)) {
-      return this.cache.get(text)!;
+    const cached = this.cache.get(text);
+    if (cached) {
+      return cached;
     }
     
     // If no LLM, return as-is

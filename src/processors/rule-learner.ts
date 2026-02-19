@@ -96,8 +96,9 @@ export class DynamicRuleLearner {
       for (const [verb, rule] of rules) {
         this.learnedRules.set(verb, rule);
 
-        if (this.ruleCache.has(verb) && this.engine.loadFacts) {
-          await this.engine.loadFacts(this.ruleCache.get(verb)!);
+        const cachedRule = this.ruleCache.get(verb);
+        if (cachedRule && this.engine.loadFacts) {
+          await this.engine.loadFacts(cachedRule);
         }
       }
     } catch {

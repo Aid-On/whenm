@@ -127,9 +127,8 @@ export class MemoryPersistence implements PersistencePlugin {
   async importProlog(facts: string): Promise<void> {
     // Parse Prolog facts
     const factRegex = /happens\(([^)]+)\),\s*"([^"]+)"\)/g;
-    let match;
-    
-    while ((match = factRegex.exec(facts)) !== null) {
+
+    for (const match of facts.matchAll(factRegex)) {
       await this.save({
         event: match[1],
         time: match[2]

@@ -4,11 +4,10 @@
  * Provides a clean abstraction over different storage mechanisms
  */
 
-import type { 
-  PersistencePlugin, 
-  PersistedEvent, 
-  PersistenceQuery, 
-  PersistenceStats 
+import type {
+  PersistencePlugin,
+  PersistedEvent,
+  PersistenceStats
 } from './types.js';
 
 /**

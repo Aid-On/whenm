@@ -3,7 +3,7 @@
  * Shows how WhenM handles overlapping events and state changes
  */
 
-import { createUnifiedEngine, createMockEngine, createGroqEngine } from '../dist/index.js';
+import { createMockEngine, createGroqEngine } from '../dist/index.js';
 import dotenv from 'dotenv';
 
 // Load environment variables

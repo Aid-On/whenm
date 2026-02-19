@@ -219,7 +219,7 @@ async function runAdvancedBenchmark() {
   }
   
   // Load dialogue
-  const eventCount = await loadDialogue(memory);
+  await loadDialogue(memory);
   
   // Run evaluation
   console.log('='.repeat(70));

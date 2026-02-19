@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { UniLLMProvider } from '../src/providers/llm-provider';
+import { UniLLMProvider, type UniLLMConfig } from '../src/providers/llm-provider';
 
 describe('UniLLMProvider', () => {
   describe('Mock provider', () => {
@@ -113,7 +113,7 @@ describe('UniLLMProvider', () => {
       ];
       
       providers.forEach(config => {
-        const provider = new UniLLMProvider(config as any);
+        const provider = new UniLLMProvider(config as UniLLMConfig);
         expect(provider).toBeDefined();
       });
     });

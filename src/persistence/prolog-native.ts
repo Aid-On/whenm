@@ -66,10 +66,12 @@ export class PrologNativePersistence implements PersistencePlugin {
   }
 
   private addToIndex(index: Map<string, PrologEvent[]>, key: string, event: PrologEvent): void {
-    if (!index.has(key)) {
-      index.set(key, []);
+    const existing = index.get(key);
+    if (existing) {
+      existing.push(event);
+    } else {
+      index.set(key, [event]);
     }
-    index.get(key)!.push(event);
   }
 
   async saveBatch(events: PersistedEvent[]): Promise<void> {
@@ -101,20 +103,22 @@ export class PrologNativePersistence implements PersistencePlugin {
   }
 
   private applyTimeFilter(results: PrologEvent[], query: PersistenceQuery): PrologEvent[] {
-    if (!query.timeRange) return results;
+    const { timeRange } = query;
+    if (!timeRange) return results;
 
     return results.filter(e => {
-      const afterFrom = !query.timeRange!.from || e.time >= String(query.timeRange!.from);
-      const beforeTo = !query.timeRange!.to || e.time <= String(query.timeRange!.to);
+      const afterFrom = !timeRange.from || e.time >= String(timeRange.from);
+      const beforeTo = !timeRange.to || e.time <= String(timeRange.to);
       return afterFrom && beforeTo;
     });
   }
 
   private applyPatternFilter(results: PrologEvent[], query: PersistenceQuery): PrologEvent[] {
-    if (!query.pattern) return results;
+    const { pattern } = query;
+    if (!pattern) return results;
 
-    const byPredicate = this.indices.byPredicate.get(query.pattern) || [];
-    const byFunctor = this.indices.byFunctor.get(query.pattern) || [];
+    const byPredicate = this.indices.byPredicate.get(pattern) || [];
+    const byFunctor = this.indices.byFunctor.get(pattern) || [];
     const patternMatches = new Set([...byPredicate, ...byFunctor]);
 
     if (patternMatches.size > 0) {
@@ -122,7 +126,7 @@ export class PrologNativePersistence implements PersistencePlugin {
     }
 
     return results.filter(e =>
-      e.event.toLowerCase().includes(query.pattern!.toLowerCase())
+      e.event.toLowerCase().includes(pattern.toLowerCase())
     );
   }
 
@@ -185,12 +189,14 @@ export class PrologNativePersistence implements PersistencePlugin {
 
     for (const event of events) {
       const predicate = event.predicate || 'happens';
-      if (!grouped.has(predicate)) {
-        grouped.set(predicate, []);
-      }
-
       const term = event.term ? termToString(event.term) : event.event;
-      grouped.get(predicate)!.push(`${predicate}(${term}, "${event.time}").`);
+      const fact = `${predicate}(${term}, "${event.time}").`;
+      const existing = grouped.get(predicate);
+      if (existing) {
+        existing.push(fact);
+      } else {
+        grouped.set(predicate, [fact]);
+      }
     }
 
     let output = '';

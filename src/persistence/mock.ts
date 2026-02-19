@@ -110,8 +110,9 @@ export class MockPersistencePlugin implements PersistencePlugin {
   }
 
   private filterByPattern(results: PersistedEvent[], query: PersistenceQuery): PersistedEvent[] {
-    if (!query.pattern) return results;
-    return results.filter(event => event.event.includes(query.pattern!));
+    const { pattern } = query;
+    if (!pattern) return results;
+    return results.filter(event => event.event.includes(pattern));
   }
 
   async delete(query: PersistenceQuery): Promise<number> {

@@ -52,19 +52,19 @@ async function testModernAPI() {
       return rules[verb] || { type: 'state_change' };
     },
     
-    async parseQuestion(question) {
+    async parseQuestion(_question) {
       return {
         queryType: 'what',
         subject: 'test',
         predicate: 'role'
       };
     },
-    
+
     async formatResponse(results) {
       return JSON.stringify(results);
     },
-    
-    async complete(prompt) {
+
+    async complete(_prompt) {
       return "Test response";
     }
   }, { debug: true });
