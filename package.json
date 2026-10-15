@@ -39,11 +39,11 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
-    "@vitest/coverage-v8": "^2.1.9",
+    "@vitest/coverage-v8": "^4.1.11",
     "dotenv": "^16.6.1",
     "tsup": "^8.5.1",
     "typescript": "^5.7.2",
-    "vitest": "^2.1.8"
+    "vitest": "^4.1.11"
   },
   "keywords": [
     "temporal-memory",
@@ -64,5 +64,11 @@
     "url": "https://github.com/Aid-On/whenm/issues"
   },
   "homepage": "https://github.com/Aid-On/whenm#readme",
-  "license": "MIT"
+  "license": "MIT",
+  "overrides": {
+    "@vitest/mocker@2.1.9": "^4.1.11",
+    "vite@5.4.21": "^6.4.3",
+    "tinypool@1.1.1": "^2.1.2",
+    "esbuild@0.21.5": "~0.25.0"
+  }
 }
